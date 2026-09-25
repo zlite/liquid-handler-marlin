@@ -1,0 +1,18 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+network_secrets.h
+Configuration_Secure.h
+
+# Build outputs and caches
+.pio/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.DS_Store
+
+# Local tool repair backups
+/platformio-repair-backup/

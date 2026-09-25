@@ -1,0 +1,25 @@
+{
+  "deck_bounds_mm": [
+    202.58,
+    175.7,
+    14.2
+  ],
+  "deck_solid_volume_cm3": 42.32729967604732,
+  "cup_solid_volume_cm3": 24.605600000000013,
+  "reservoir_brim_ml": 110.592,
+  "fill_100ml_height_from_cup_bottom_mm": 22.793333333333333,
+  "plate_seating_z_mm": 3.2,
+  "reservoir_rim_z_mm": 28.2,
+  "plate_center_xy_mm": [
+    76.0,
+    70.0
+  ],
+  "reservoir_center_xy_mm": [
+    105.0,
+    151.0
+  ],
+  "mouth_mm": [
+    140.36,
+    98.08
+  ]
+}

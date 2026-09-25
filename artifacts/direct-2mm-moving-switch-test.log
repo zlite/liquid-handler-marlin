@@ -1,0 +1,244 @@
+
+  945.629 TX M400
+  945.636 RX ok
+  945.636 TX M120
+  945.736 RX ok
+  945.736 TX M211 S0
+  945.837 RX ok
+  945.837 TX G21
+  945.937 RX ok
+  945.938 TX G91
+  946.038 RX ok
+  946.038 TX G1 A-2 F60
+  946.139 RX ok
+  946.139 TX M119
+  946.239 RX Reporting endstop status
+  946.239 RX x_min: open
+  946.239 RX y_min: TRIGGERED
+  946.240 RX z_min: open
+  946.240 RX a_min: open
+  946.240 RX ok
+  946.240 TX M119
+  946.340 RX Reporting endstop status
+  946.340 RX x_min: open
+  946.340 RX y_min: TRIGGERED
+  946.341 RX z_min: open
+  946.341 RX a_min: open
+  946.341 RX ok
+  946.341 TX M119
+  946.441 RX Reporting endstop status
+  946.442 RX x_min: open
+  946.442 RX y_min: TRIGGERED
+  946.442 RX z_min: open
+  946.442 RX a_min: open
+  946.442 RX ok
+  946.442 TX M119
+  946.542 RX Reporting endstop status
+  946.542 RX x_min: open
+  946.542 RX y_min: TRIGGERED
+  946.543 RX z_min: open
+  946.543 RX a_min: open
+  946.543 RX ok
+  946.543 TX M119
+  946.643 RX Reporting endstop status
+  946.644 RX x_min: open
+  946.644 RX y_min: TRIGGERED
+  946.644 RX z_min: open
+  946.644 RX a_min: open
+  946.644 RX ok
+  946.644 TX M119
+  946.744 RX Reporting endstop status
+  946.744 RX x_min: open
+  946.744 RX y_min: TRIGGERED
+  946.744 RX z_min: open
+  946.744 RX a_min: open
+  946.745 RX ok
+  946.745 TX M119
+  946.845 RX Reporting endstop status
+  946.845 RX x_min: open
+  946.845 RX y_min: TRIGGERED
+  946.845 RX z_min: open
+  946.845 RX a_min: open
+  946.845 RX ok
+  946.845 TX M119
+  946.946 RX Reporting endstop status
+  946.946 RX x_min: open
+  946.946 RX y_min: TRIGGERED
+  946.946 RX z_min: open
+  946.946 RX a_min: open
+  946.946 RX ok
+  946.946 TX M119
+  947.046 RX Reporting endstop status
+  947.046 RX x_min: open
+  947.047 RX y_min: TRIGGERED
+  947.047 RX z_min: open
+  947.047 RX a_min: open
+  947.047 RX ok
+  947.047 TX M119
+  947.147 RX Reporting endstop status
+  947.147 RX x_min: open
+  947.147 RX y_min: TRIGGERED
+  947.147 RX z_min: open
+  947.147 RX a_min: open
+  947.147 RX ok
+  947.147 TX M119
+  947.247 RX Reporting endstop status
+  947.248 RX x_min: open
+  947.248 RX y_min: TRIGGERED
+  947.248 RX z_min: open
+  947.248 RX a_min: open
+  947.248 RX ok
+  947.248 TX M119
+  947.348 RX Reporting endstop status
+  947.348 RX x_min: open
+  947.348 RX y_min: TRIGGERED
+  947.348 RX z_min: open
+  947.348 RX a_min: open
+  947.349 RX ok
+  947.349 TX M119
+  947.449 RX Reporting endstop status
+  947.449 RX x_min: open
+  947.449 RX y_min: TRIGGERED
+  947.449 RX z_min: open
+  947.449 RX a_min: open
+  947.449 RX ok
+  947.449 TX M119
+  947.549 RX Reporting endstop status
+  947.549 RX x_min: open
+  947.549 RX y_min: TRIGGERED
+  947.549 RX z_min: open
+  947.549 RX a_min: open
+  947.550 RX ok
+  947.550 TX M119
+  947.650 RX Reporting endstop status
+  947.650 RX x_min: open
+  947.650 RX y_min: TRIGGERED
+  947.650 RX z_min: open
+  947.650 RX a_min: open
+  947.650 RX ok
+  947.650 TX M119
+  947.750 RX Reporting endstop status
+  947.750 RX x_min: open
+  947.750 RX y_min: TRIGGERED
+  947.750 RX z_min: open
+  947.750 RX a_min: open
+  947.751 RX ok
+  947.751 TX M119
+  947.851 RX Reporting endstop status
+  947.851 RX x_min: open
+  947.851 RX y_min: TRIGGERED
+  947.851 RX z_min: open
+  947.851 RX a_min: open
+  947.851 RX ok
+  947.851 TX M119
+  947.951 RX Reporting endstop status
+  947.952 RX x_min: open
+  947.952 RX y_min: TRIGGERED
+  947.952 RX z_min: open
+  947.952 RX a_min: open
+  947.952 RX ok
+  947.952 TX M119
+  948.053 RX Reporting endstop status
+  948.053 RX x_min: open
+  948.053 RX y_min: TRIGGERED
+  948.053 RX z_min: open
+  948.053 RX a_min: open
+  948.053 RX ok
+  948.053 TX M119
+  948.153 RX Reporting endstop status
+  948.154 RX x_min: open
+  948.154 RX y_min: TRIGGERED
+  948.154 RX z_min: open
+  948.154 RX a_min: open
+  948.154 RX ok
+  948.154 TX M119
+  948.254 RX Reporting endstop status
+  948.254 RX x_min: open
+  948.255 RX y_min: TRIGGERED
+  948.255 RX z_min: open
+  948.255 RX a_min: open
+  948.255 RX ok
+  948.255 TX M119
+  948.355 RX Reporting endstop status
+  948.355 RX x_min: open
+  948.355 RX y_min: TRIGGERED
+  948.355 RX z_min: open
+  948.356 RX a_min: open
+  948.356 RX ok
+  948.356 TX M119
+  948.456 RX Reporting endstop status
+  948.456 RX x_min: open
+  948.456 RX y_min: TRIGGERED
+  948.456 RX z_min: open
+  948.456 RX a_min: open
+  948.457 RX ok
+  948.457 TX M119
+  948.557 RX Reporting endstop status
+  948.557 RX x_min: open
+  948.557 RX y_min: TRIGGERED
+  948.557 RX z_min: open
+  948.557 RX a_min: open
+  948.558 RX ok
+  948.558 TX M119
+  948.658 RX Reporting endstop status
+  948.658 RX x_min: open
+  948.658 RX y_min: TRIGGERED
+  948.659 RX z_min: open
+  948.659 RX a_min: open
+  948.659 RX ok
+  948.659 TX M119
+  948.759 RX Reporting endstop status
+  948.759 RX x_min: open
+  948.760 RX y_min: TRIGGERED
+  948.760 RX z_min: open
+  948.760 RX a_min: open
+  948.760 RX ok
+  948.760 TX M119
+  948.860 RX Reporting endstop status
+  948.860 RX x_min: open
+  948.860 RX y_min: TRIGGERED
+  948.860 RX z_min: open
+  948.860 RX a_min: open
+  948.860 RX ok
+  948.861 TX M119
+  948.961 RX Reporting endstop status
+  948.961 RX x_min: open
+  948.961 RX y_min: TRIGGERED
+  948.961 RX z_min: open
+  948.961 RX a_min: open
+  948.961 RX ok
+  948.961 TX M119
+  949.062 RX Reporting endstop status
+  949.062 RX x_min: open
+  949.062 RX y_min: TRIGGERED
+  949.062 RX z_min: open
+  949.062 RX a_min: open
+  949.062 RX ok
+  949.062 TX M119
+  949.162 RX Reporting endstop status
+  949.162 RX x_min: open
+  949.163 RX y_min: TRIGGERED
+  949.163 RX z_min: open
+  949.163 RX a_min: open
+  949.163 RX ok
+  949.163 TX M400
+  949.263 RX ok
+  949.263 TX G90
+  949.363 RX ok
+  949.364 TX M211 S1
+  949.464 RX ok
+  949.464 TX M114
+  949.564 RX X:0.00 Y:0.00 Z:0.00 A:-2.00 Count X:0 Y:0 Z:0 A:-3200
+  949.564 RX ok
+  949.564 TX M119
+  949.664 RX Reporting endstop status
+  949.664 RX x_min: open
+  949.664 RX y_min: TRIGGERED
+  949.664 RX z_min: open
+  949.664 RX a_min: open
+  949.664 RX ok
+  949.665 TX M400
+  949.765 RX ok
+  949.765 TX M84
+  949.865 RX ok
+  949.865 DONE direct-2mm-motion-switch-sampling

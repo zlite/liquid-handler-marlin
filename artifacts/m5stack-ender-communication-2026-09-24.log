@@ -1,0 +1,34 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+E (183) esp_core_dump_fðfÍ¡é Core dump data check failed:
+Calculated checksum='3342918a'
+Image checksum='ffffffff'
+SPI 1 MHz: rev 0x13
+SPI 4 MHz: rev 0x13
+SPI 8 MHz: rev 0x13
+SPI 26 MHz: rev 0x13
+Read-only probe: 250000 bps
+MAX3421E init: OK
+Serial mount: success=1 baud=250000
+USB attached: address=1 VID:PID=1a86:7523
+TX: M115
+FIRMWARE_NAME:Marlin bugfix-2.1.x Liquid Handler R5 (Sep 23 2026Marlin PROTOCOL_VERSION:1.0 MACH48-9b12-c55c62f367ff
+Cap:SERIAL_OREPORT_TEMP:0
+Cap:PROGRESS:0
+CaCENT:0
+Cap:SOFTWARE_POWER:0
+Cap:p:PROMPT_SUPPORT:1
+Cap:SDCARD:1
+E:0
+Cap:LFN_WRITE:0
+Cap:CUSTOM_FTX: M114
+TX: M119
+Probe: serial=mounted baud=250000 queries=3

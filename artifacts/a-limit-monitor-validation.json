@@ -1,0 +1,86 @@
+[
+  {
+    "ready": true,
+    "aLimit": "TRIGGERED",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 125,
+    "aLimitSamples": 39
+  },
+  {
+    "ready": true,
+    "aLimit": "TRIGGERED",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 125,
+    "aLimitSamples": 42
+  },
+  {
+    "ready": true,
+    "aLimit": "open",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 187,
+    "aLimitSamples": 45
+  },
+  {
+    "ready": true,
+    "aLimit": "TRIGGERED",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 63,
+    "aLimitSamples": 49
+  },
+  {
+    "ready": true,
+    "aLimit": "open",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 94,
+    "aLimitSamples": 52
+  },
+  {
+    "ready": true,
+    "aLimit": "open",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 94,
+    "aLimitSamples": 55
+  },
+  {
+    "ready": true,
+    "aLimit": "TRIGGERED",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 95,
+    "aLimitSamples": 58
+  },
+  {
+    "ready": true,
+    "aLimit": "open",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 125,
+    "aLimitSamples": 61
+  },
+  {
+    "ready": true,
+    "aLimit": "open",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 156,
+    "aLimitSamples": 65
+  },
+  {
+    "ready": true,
+    "aLimit": "open",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 156,
+    "aLimitSamples": 68
+  },
+  {
+    "ready": true,
+    "aLimit": "open",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 188,
+    "aLimitSamples": 71
+  },
+  {
+    "ready": true,
+    "aLimit": "open",
+    "aLimitFresh": true,
+    "aLimitAgeMs": 64,
+    "aLimitSamples": 75
+  }
+]

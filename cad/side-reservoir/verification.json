@@ -1,0 +1,57 @@
+{
+  "cadquery": "2.8.0",
+  "python": "3.12.12",
+  "brim_capacity_ml": 110.592,
+  "working_volume_ml": 100,
+  "outside_cup_mm": [
+    104.0,
+    52.0,
+    25.0
+  ],
+  "floor_mm": 1.9600000000000009,
+  "cup_center_cad_xy": [
+    105.0,
+    151.0
+  ],
+  "plate_center_cad_xy": [
+    76.0,
+    70.0
+  ],
+  "assembly_interference_mm3": 0,
+  "mounting_holes_clear": true,
+  "meshes": {
+    "LH_deck_four_bolt": {
+      "watertight": true,
+      "bounds_mm": [
+        202.57999992370605,
+        186.0,
+        14.199999809265137
+      ]
+    },
+    "LH_reservoir_100mL": {
+      "watertight": true,
+      "bounds_mm": [
+        104.0,
+        52.0,
+        25.0
+      ]
+    }
+  },
+  "sha256": {
+    "LH_deck.step": "dc2e69f7f560c3ae32ef9eaccce88dc74170a9319c6c30663ca457ddacee5046",
+    "LH_deck.stl": "967c86aa0530b64a75fc2bf718d0ad7337033897bfd595e31ed74f0e36f8a717",
+    "LH_deck_assembly.step": "fa94ec23cf3b0dc5193ca1bcf406391488f2172de6059000cd823a950e8736e1",
+    "LH_deck_four_bolt.step": "86e3d2833354bc47af605c4697098cf5fa0f81430770a0c4ae237d074bcc95de",
+    "LH_deck_four_bolt.stl": "3b8ab91f2431eec5c56833b688ff04a446c30c90e2ad7d8857a86dcde73a4dcf",
+    "LH_deck_four_bolt_assembly.step": "a38d390eb7a2f27edc4223fa7ba54e2df4aec4ab5128031e2c478115f00e1106",
+    "LH_optional_plate_fit_gauge.stl": "6a6047cf47cdc178cfddbadc934d3e75332242b5f5819fe7f47e71fc986e21bf",
+    "LH_reservoir_100mL.step": "f94f49c5fb5108f7df29e9efead3725080b97256dc45793d8151677ad392d41d",
+    "LH_reservoir_100mL.stl": "d4abab8a5fc8f664debd74a8afa1d6278475fb0aacc5edd9a1d82163b1d46252",
+    "build_four_bolt_deck.py": "120b6d456acc91d5c2be30eb5eec38838d645c455afd4ecef5d4d0ecc9876a42",
+    "build_liquid_handler_deck.py": "5490bc5298553d8931dece1700b838f4c1f53aa45623a90f64ed00741f52ed1f",
+    "original/build_four_bolt_deck.py": "120b6d456acc91d5c2be30eb5eec38838d645c455afd4ecef5d4d0ecc9876a42",
+    "original/build_liquid_handler_deck.py": "12aa357da6bc4b3a12a87f84132a838c553deebe4b31851886e0a4920e06c9d5",
+    "render_deck.py": "9b543001bfe680cc461f9e53c70ac40dc886f88643b2305706af6630727145f8",
+    "verify.py": "d84786258345aae8aefb7b7b2f53d880106b5a26275414c793db1bbea8024e0e"
+  }
+}

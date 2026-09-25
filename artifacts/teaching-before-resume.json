@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "name": "96-well plate",
+  "notes": "",
+  "rows": 8,
+  "columns": 12,
+  "nominalPitchMm": 9,
+  "units": "mm",
+  "plateVerified": true,
+  "heightsValid": false,
+  "points": {
+    "a1": {
+      "x": 172,
+      "y": 110,
+      "z": 39,
+      "a": 0
+    },
+    "a12": {
+      "x": 172,
+      "y": 209,
+      "z": 39,
+      "a": 0
+    },
+    "h1": {
+      "x": 110,
+      "y": 109,
+      "z": 39,
+      "a": 0
+    },
+    "h12": {
+      "x": 110,
+      "y": 208,
+      "z": 39,
+      "a": 0
+    }
+  }
+}

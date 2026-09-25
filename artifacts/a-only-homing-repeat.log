@@ -1,0 +1,50 @@
+Operation: Diagnose A homing
+TX M400
+RX ok
+TX M119
+RX Reporting endstop status
+RX x_min: TRIGGERED
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+TX M503
+RX echo:; Linear Units:
+RX echo:  G21 ; (mm)
+RX echo:; Temperature Units:
+RX echo:  M149 C ; Units in Celsius
+RX echo:; Steps per unit:
+RX echo:  M92 X80.00 Y80.00 Z400.00 A320.00
+RX echo:; Max feedrates (units/s):
+RX echo:  M203 X500.00 Y500.00 Z5.00 A5.00
+RX echo:; Max Acceleration (units/s2):
+RX echo:  M201 X500.00 Y500.00 Z100.00 A50.00
+RX echo:; Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
+RX echo:  M204 P500.00 R500.00 T500.00
+RX echo:; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>):
+RX echo:  M205 B20000.00 S0.00 T0.00 J0.01
+RX echo:; Home offset:
+RX echo:  M206 X0.00 Y0.00 Z0.00 A0.00
+RX ok
+TX G21
+RX ok
+TX G28 A R0
+RX echo:busy: processing
+RX echo:busy: processing
+RX echo:busy: processing
+RX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0
+RX ok
+TX M400
+RX ok
+TX M114
+RX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0
+RX ok
+TX M119
+RX Reporting endstop status
+RX x_min: TRIGGERED
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+TX M84
+RX ok

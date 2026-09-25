@@ -1,0 +1,43 @@
+{
+  "positionReleaseJobsPassed": 20,
+  "unhomedActionsRejected": true,
+  "state": {
+    "schema": 1,
+    "name": "96-well plate",
+    "notes": "",
+    "rows": 8,
+    "columns": 12,
+    "nominalPitchMm": 9,
+    "units": "mm",
+    "plateVerified": false,
+    "heightsValid": false,
+    "points": {},
+    "ready": true,
+    "busy": false,
+    "message": "Ready \u00b7 motors released",
+    "xyHomed": false,
+    "zHomed": false,
+    "saved": false,
+    "log": " motors\nTX M400\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\n",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 5,
+      "a": 0
+    },
+    "geometry": "Capture A1, A12, and H1.",
+    "heights": "Capture reservoir, dispense, and travel heights. Travel Z must be higher than the working heights."
+  },
+  "calibration": {
+    "schema": 1,
+    "name": "96-well plate",
+    "notes": "",
+    "rows": 8,
+    "columns": 12,
+    "nominalPitchMm": 9,
+    "units": "mm",
+    "plateVerified": false,
+    "heightsValid": false,
+    "points": {}
+  }
+}

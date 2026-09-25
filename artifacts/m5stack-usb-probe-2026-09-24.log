@@ -1,0 +1,16 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+MAX3421E SPI 1000000 Hz revision=0xff (expected 01/12/13)
+MAX3421E SPI 4000000 Hz revision=0xff (expected 01/12/13)
+MAX3421E SPI 8000000 Hz revision=0xff (expected 01/12/13)
+MAX3421E SPI 26000000 Hz revision=0xff (expected 01/12/13)
+Ender USB probe: identification/position/endstop queries only
+MAX3421E init: FAILED

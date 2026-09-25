@@ -1,0 +1,30 @@
+{
+  "positionReleaseJobsPassed": 10,
+  "state": {
+    "schema": 1,
+    "name": "96-well plate",
+    "notes": "",
+    "rows": 8,
+    "columns": 12,
+    "nominalPitchMm": 9,
+    "units": "mm",
+    "plateVerified": false,
+    "heightsValid": false,
+    "points": {},
+    "ready": true,
+    "busy": false,
+    "message": "Ready \u00b7 motors released",
+    "xyHomed": false,
+    "zHomed": false,
+    "saved": false,
+    "log": "PROM:1\nRX Cap:VOLUMETRIC:0\nRX Cap:AUTOREPORT_POS:0\nRX Cap:AUTOREPORT_TEMP:0\nRX Cap:PROGRESS:0\nRX Cap:PRINT_JOB:1\nRX Cap:AUTOLEVEL:0\nRX Cap:RUNOUT:0\nRX Cap:Z_PROBE:0\nRX Cap:LEVELING_DATA:0\nRX Cap:BUILD_PERCENT:0\nRX Cap:SOFTWARE_POWER:0\nRX Cap:TOGGLE_LIGHTS:0\nRX Cap:CASE_LIGHT_BRIGHTNESS:0\nRX Cap:EMERGENCY_PARSER:0\nRX Cap:HOST_ACTION_COMMANDS:1\nRX Cap:PROMPT_SUPPORT:1\nRX Cap:SDCARD:1\nRX Cap:MULTI_VOLUME:0\nRX Cap:REPEAT:0\nRX Cap:SD_WRITE:1\nRX Cap:AUTOREPORT_SD_STATUS:0\nRX Cap:LONG_FILENAME:0\nRX Cap:LFN_WRITE:0\nRX Cap:CUSTOM_FIRMWARE_UPLOAD:0\nRX Cap:EXTENDED_M20:0\nRX Cap:THERMAL_PROTECTION:1\nRX Cap:MOTION_MODES:0\nRX Cap:ARCS:1\nRX Cap:BABYSTEPPING:0\nRX Cap:EP_BABYSTEP:0\nRX Cap:CHAMBER_TEMPERATURE:0\nRX Cap:COOLER_TEMPERATURE:0\nRX Cap:MEATPACK:0\nRX Cap:CONFIG_EXPORT:0\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M400\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\nOperation: Read position\nTX M400\nRX ok\nTX M114\nRX X:0.00 Y:0.00 Z:5.00 A:0.00 Count X:0 Y:0 Z:2000 A:0\nRX ok\nTX M84\nRX ok\nReady \u00b7 motors released\n",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 5,
+      "a": 0
+    },
+    "geometry": "Capture A1, A12, and H1.",
+    "heights": "Capture reservoir, dispense, and travel heights. Travel Z must be higher than the working heights."
+  }
+}

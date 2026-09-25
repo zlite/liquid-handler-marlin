@@ -1,0 +1,454 @@
+Operation: Moving motor test
+TX M400
+RX ok
+TX M92 A320
+RX ok
+TX M114
+RX X:0.00 Y:0.00 Z:0.00 A:-10.00 Count X:0 Y:0 Z:0 A:-3200
+RX ok
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+TX M120
+RX ok
+TX M211 S0
+RX ok
+TX G21
+RX ok
+TX G91
+RX ok
+TX G1 A-5 F30
+RX ok
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=23 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=223 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=423 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=623 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=822 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=1022 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=1222 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=1422 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=1622 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=1822 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=2022 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=2222 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=2422 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=2622 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=2822 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=3022 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=3222 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=3422 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=3622 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=3822 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=4022 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=4222 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=4423 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=4623 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=4822 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=5022 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=5222 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=5422 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=5622 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=5822 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=6022 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=6222 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=6422 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=6622 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=6822 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=7022 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=7222 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=7423 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=7623 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=7823 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=8038 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=8237 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=8438 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=8637 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=8837 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=9037 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=9237 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=9456 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=9656 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=9856 A=open
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+MOTION_SAMPLE ms=10056 A=open
+TX M400
+RX ok
+TX G90
+RX ok
+TX M211 S1
+RX ok
+TX M114
+RX X:0.00 Y:0.00 Z:0.00 A:-15.00 Count X:0 Y:0 Z:0 A:-4800
+RX ok
+TX M119
+RX Reporting endstop status
+RX x_min: open
+RX y_min: TRIGGERED
+RX z_min: open
+RX a_min: open
+RX ok
+TX M400
+RX ok
+TX M84
+RX ok
+Moving motor test: 51 readings, 0 triggered; motor release acknowledged

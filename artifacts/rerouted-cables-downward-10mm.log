@@ -1,0 +1,804 @@
+
+  316.408 TX M400
+  316.428 RX ok
+  316.428 TX M120
+  316.528 RX ok
+  316.528 TX M211 S0
+  316.628 RX ok
+  316.628 TX G21
+  316.728 RX ok
+  316.729 TX G91
+  316.829 RX ok
+  316.829 TX G1 A-10 F60
+  316.929 RX ok
+  316.929 TX M119
+  317.029 RX Reporting endstop status
+  317.030 RX x_min: open
+  317.030 RX y_min: TRIGGERED
+  317.030 RX z_min: open
+  317.030 RX a_min: open
+  317.030 RX ok
+  317.030 TX M119
+  317.130 RX Reporting endstop status
+  317.130 RX x_min: open
+  317.130 RX y_min: TRIGGERED
+  317.130 RX z_min: open
+  317.130 RX a_min: open
+  317.130 RX ok
+  317.130 TX M119
+  317.231 RX Reporting endstop status
+  317.231 RX x_min: open
+  317.231 RX y_min: TRIGGERED
+  317.231 RX z_min: open
+  317.231 RX a_min: open
+  317.231 RX ok
+  317.231 TX M119
+  317.331 RX Reporting endstop status
+  317.332 RX x_min: open
+  317.332 RX y_min: TRIGGERED
+  317.332 RX z_min: open
+  317.332 RX a_min: open
+  317.332 RX ok
+  317.332 TX M119
+  317.432 RX Reporting endstop status
+  317.432 RX x_min: open
+  317.432 RX y_min: TRIGGERED
+  317.433 RX z_min: open
+  317.433 RX a_min: open
+  317.433 RX ok
+  317.433 TX M119
+  317.533 RX Reporting endstop status
+  317.533 RX x_min: open
+  317.533 RX y_min: TRIGGERED
+  317.533 RX z_min: open
+  317.533 RX a_min: open
+  317.534 RX ok
+  317.534 TX M119
+  317.634 RX Reporting endstop status
+  317.634 RX x_min: open
+  317.634 RX y_min: TRIGGERED
+  317.634 RX z_min: open
+  317.634 RX a_min: open
+  317.635 RX ok
+  317.635 TX M119
+  317.735 RX Reporting endstop status
+  317.735 RX x_min: open
+  317.735 RX y_min: TRIGGERED
+  317.735 RX z_min: open
+  317.735 RX a_min: open
+  317.735 RX ok
+  317.735 TX M119
+  317.836 RX Reporting endstop status
+  317.836 RX x_min: open
+  317.836 RX y_min: TRIGGERED
+  317.836 RX z_min: open
+  317.836 RX a_min: open
+  317.836 RX ok
+  317.836 TX M119
+  317.936 RX Reporting endstop status
+  317.936 RX x_min: open
+  317.936 RX y_min: TRIGGERED
+  317.936 RX z_min: open
+  317.936 RX a_min: open
+  317.936 RX ok
+  317.937 TX M119
+  318.037 RX Reporting endstop status
+  318.037 RX x_min: open
+  318.037 RX y_min: TRIGGERED
+  318.037 RX z_min: open
+  318.037 RX a_min: open
+  318.037 RX ok
+  318.037 TX M119
+  318.137 RX Reporting endstop status
+  318.137 RX x_min: open
+  318.138 RX y_min: TRIGGERED
+  318.138 RX z_min: open
+  318.138 RX a_min: open
+  318.138 RX ok
+  318.138 TX M119
+  318.238 RX Reporting endstop status
+  318.238 RX x_min: open
+  318.239 RX y_min: TRIGGERED
+  318.239 RX z_min: open
+  318.239 RX a_min: open
+  318.239 RX ok
+  318.239 TX M119
+  318.339 RX Reporting endstop status
+  318.339 RX x_min: open
+  318.339 RX y_min: TRIGGERED
+  318.339 RX z_min: open
+  318.339 RX a_min: open
+  318.340 RX ok
+  318.340 TX M119
+  318.440 RX Reporting endstop status
+  318.440 RX x_min: open
+  318.440 RX y_min: TRIGGERED
+  318.441 RX z_min: open
+  318.441 RX a_min: open
+  318.441 RX ok
+  318.441 TX M119
+  318.541 RX Reporting endstop status
+  318.541 RX x_min: open
+  318.541 RX y_min: TRIGGERED
+  318.541 RX z_min: open
+  318.542 RX a_min: open
+  318.542 RX ok
+  318.542 TX M119
+  318.642 RX Reporting endstop status
+  318.642 RX x_min: open
+  318.643 RX y_min: TRIGGERED
+  318.643 RX z_min: open
+  318.643 RX a_min: open
+  318.643 RX ok
+  318.643 TX M119
+  318.744 RX Reporting endstop status
+  318.744 RX x_min: open
+  318.744 RX y_min: TRIGGERED
+  318.744 RX z_min: open
+  318.744 RX a_min: open
+  318.744 RX ok
+  318.744 TX M119
+  318.845 RX Reporting endstop status
+  318.845 RX x_min: open
+  318.845 RX y_min: TRIGGERED
+  318.845 RX z_min: open
+  318.845 RX a_min: open
+  318.845 RX ok
+  318.845 TX M119
+  318.945 RX Reporting endstop status
+  318.945 RX x_min: open
+  318.945 RX y_min: TRIGGERED
+  318.945 RX z_min: open
+  318.945 RX a_min: open
+  318.945 RX ok
+  318.945 TX M119
+  319.046 RX Reporting endstop status
+  319.046 RX x_min: open
+  319.046 RX y_min: TRIGGERED
+  319.046 RX z_min: open
+  319.046 RX a_min: open
+  319.046 RX ok
+  319.046 TX M119
+  319.146 RX Reporting endstop status
+  319.146 RX x_min: open
+  319.146 RX y_min: TRIGGERED
+  319.146 RX z_min: open
+  319.146 RX a_min: open
+  319.147 RX ok
+  319.147 TX M119
+  319.247 RX Reporting endstop status
+  319.247 RX x_min: open
+  319.247 RX y_min: TRIGGERED
+  319.247 RX z_min: open
+  319.247 RX a_min: open
+  319.247 RX ok
+  319.247 TX M119
+  319.347 RX Reporting endstop status
+  319.348 RX x_min: open
+  319.348 RX y_min: TRIGGERED
+  319.348 RX z_min: open
+  319.348 RX a_min: open
+  319.348 RX ok
+  319.348 TX M119
+  319.448 RX Reporting endstop status
+  319.448 RX x_min: open
+  319.448 RX y_min: TRIGGERED
+  319.448 RX z_min: open
+  319.448 RX a_min: open
+  319.448 RX ok
+  319.448 TX M119
+  319.548 RX Reporting endstop status
+  319.548 RX x_min: open
+  319.549 RX y_min: TRIGGERED
+  319.549 RX z_min: open
+  319.549 RX a_min: open
+  319.549 RX ok
+  319.549 TX M119
+  319.649 RX Reporting endstop status
+  319.649 RX x_min: open
+  319.649 RX y_min: TRIGGERED
+  319.649 RX z_min: open
+  319.649 RX a_min: open
+  319.649 RX ok
+  319.649 TX M119
+  319.750 RX Reporting endstop status
+  319.750 RX x_min: open
+  319.750 RX y_min: TRIGGERED
+  319.750 RX z_min: open
+  319.750 RX a_min: open
+  319.750 RX ok
+  319.750 TX M119
+  319.850 RX Reporting endstop status
+  319.850 RX x_min: open
+  319.850 RX y_min: TRIGGERED
+  319.850 RX z_min: open
+  319.850 RX a_min: open
+  319.850 RX ok
+  319.850 TX M119
+  319.951 RX Reporting endstop status
+  319.951 RX x_min: open
+  319.951 RX y_min: TRIGGERED
+  319.951 RX z_min: open
+  319.951 RX a_min: open
+  319.952 RX ok
+  319.952 TX M119
+  320.052 RX Reporting endstop status
+  320.052 RX x_min: open
+  320.052 RX y_min: TRIGGERED
+  320.052 RX z_min: open
+  320.052 RX a_min: open
+  320.052 RX ok
+  320.053 TX M119
+  320.153 RX Reporting endstop status
+  320.153 RX x_min: open
+  320.153 RX y_min: TRIGGERED
+  320.153 RX z_min: open
+  320.153 RX a_min: open
+  320.153 RX ok
+  320.153 TX M119
+  320.254 RX Reporting endstop status
+  320.254 RX x_min: open
+  320.254 RX y_min: TRIGGERED
+  320.254 RX z_min: open
+  320.254 RX a_min: open
+  320.254 RX ok
+  320.254 TX M119
+  320.355 RX Reporting endstop status
+  320.355 RX x_min: open
+  320.355 RX y_min: TRIGGERED
+  320.355 RX z_min: open
+  320.355 RX a_min: open
+  320.356 RX ok
+  320.356 TX M119
+  320.456 RX Reporting endstop status
+  320.456 RX x_min: open
+  320.456 RX y_min: TRIGGERED
+  320.456 RX z_min: open
+  320.456 RX a_min: open
+  320.457 RX ok
+  320.457 TX M119
+  320.557 RX Reporting endstop status
+  320.557 RX x_min: open
+  320.557 RX y_min: TRIGGERED
+  320.557 RX z_min: open
+  320.558 RX a_min: open
+  320.558 RX ok
+  320.558 TX M119
+  320.658 RX Reporting endstop status
+  320.658 RX x_min: open
+  320.658 RX y_min: TRIGGERED
+  320.659 RX z_min: open
+  320.659 RX a_min: open
+  320.659 RX ok
+  320.659 TX M119
+  320.759 RX Reporting endstop status
+  320.759 RX x_min: open
+  320.759 RX y_min: TRIGGERED
+  320.759 RX z_min: open
+  320.760 RX a_min: open
+  320.760 RX ok
+  320.760 TX M119
+  320.860 RX Reporting endstop status
+  320.860 RX x_min: open
+  320.861 RX y_min: TRIGGERED
+  320.861 RX z_min: open
+  320.861 RX a_min: open
+  320.861 RX ok
+  320.861 TX M119
+  320.961 RX Reporting endstop status
+  320.961 RX x_min: open
+  320.962 RX y_min: TRIGGERED
+  320.962 RX z_min: open
+  320.962 RX a_min: open
+  320.962 RX ok
+  320.962 TX M119
+  321.062 RX Reporting endstop status
+  321.062 RX x_min: open
+  321.063 RX y_min: TRIGGERED
+  321.063 RX z_min: open
+  321.063 RX a_min: open
+  321.063 RX ok
+  321.063 TX M119
+  321.163 RX Reporting endstop status
+  321.163 RX x_min: open
+  321.163 RX y_min: TRIGGERED
+  321.163 RX z_min: open
+  321.163 RX a_min: open
+  321.163 RX ok
+  321.163 TX M119
+  321.264 RX Reporting endstop status
+  321.264 RX x_min: open
+  321.264 RX y_min: TRIGGERED
+  321.264 RX z_min: open
+  321.264 RX a_min: open
+  321.264 RX ok
+  321.264 TX M119
+  321.364 RX Reporting endstop status
+  321.364 RX x_min: open
+  321.364 RX y_min: TRIGGERED
+  321.364 RX z_min: open
+  321.364 RX a_min: open
+  321.364 RX ok
+  321.365 TX M119
+  321.465 RX Reporting endstop status
+  321.465 RX x_min: open
+  321.465 RX y_min: TRIGGERED
+  321.465 RX z_min: open
+  321.465 RX a_min: open
+  321.465 RX ok
+  321.465 TX M119
+  321.565 RX Reporting endstop status
+  321.565 RX x_min: open
+  321.565 RX y_min: TRIGGERED
+  321.565 RX z_min: open
+  321.566 RX a_min: open
+  321.566 RX ok
+  321.566 TX M119
+  321.666 RX Reporting endstop status
+  321.666 RX x_min: open
+  321.666 RX y_min: TRIGGERED
+  321.666 RX z_min: open
+  321.666 RX a_min: open
+  321.666 RX ok
+  321.666 TX M119
+  321.766 RX Reporting endstop status
+  321.767 RX x_min: open
+  321.767 RX y_min: TRIGGERED
+  321.767 RX z_min: open
+  321.767 RX a_min: open
+  321.767 RX ok
+  321.767 TX M119
+  321.867 RX Reporting endstop status
+  321.867 RX x_min: open
+  321.867 RX y_min: TRIGGERED
+  321.867 RX z_min: open
+  321.867 RX a_min: open
+  321.867 RX ok
+  321.867 TX M119
+  321.967 RX Reporting endstop status
+  321.968 RX x_min: open
+  321.968 RX y_min: TRIGGERED
+  321.968 RX z_min: open
+  321.968 RX a_min: open
+  321.968 RX ok
+  321.968 TX M119
+  322.069 RX Reporting endstop status
+  322.069 RX x_min: open
+  322.069 RX y_min: TRIGGERED
+  322.069 RX z_min: open
+  322.069 RX a_min: open
+  322.069 RX ok
+  322.069 TX M119
+  322.169 RX Reporting endstop status
+  322.170 RX x_min: open
+  322.170 RX y_min: TRIGGERED
+  322.170 RX z_min: open
+  322.170 RX a_min: open
+  322.170 RX ok
+  322.170 TX M119
+  322.270 RX Reporting endstop status
+  322.271 RX x_min: open
+  322.271 RX y_min: TRIGGERED
+  322.271 RX z_min: open
+  322.271 RX a_min: open
+  322.271 RX ok
+  322.271 TX M119
+  322.371 RX Reporting endstop status
+  322.371 RX x_min: open
+  322.371 RX y_min: TRIGGERED
+  322.372 RX z_min: open
+  322.372 RX a_min: open
+  322.372 RX ok
+  322.372 TX M119
+  322.472 RX Reporting endstop status
+  322.473 RX x_min: open
+  322.473 RX y_min: TRIGGERED
+  322.473 RX z_min: open
+  322.473 RX a_min: open
+  322.473 RX ok
+  322.473 TX M119
+  322.574 RX Reporting endstop status
+  322.574 RX x_min: open
+  322.574 RX y_min: TRIGGERED
+  322.574 RX z_min: open
+  322.574 RX a_min: open
+  322.574 RX ok
+  322.574 TX M119
+  322.675 RX Reporting endstop status
+  322.675 RX x_min: open
+  322.675 RX y_min: TRIGGERED
+  322.675 RX z_min: open
+  322.675 RX a_min: open
+  322.675 RX ok
+  322.675 TX M119
+  322.776 RX Reporting endstop status
+  322.776 RX x_min: open
+  322.776 RX y_min: TRIGGERED
+  322.776 RX z_min: open
+  322.776 RX a_min: open
+  322.776 RX ok
+  322.776 TX M119
+  322.876 RX Reporting endstop status
+  322.876 RX x_min: open
+  322.877 RX y_min: TRIGGERED
+  322.877 RX z_min: open
+  322.877 RX a_min: open
+  322.877 RX ok
+  322.877 TX M119
+  322.978 RX Reporting endstop status
+  322.978 RX x_min: open
+  322.978 RX y_min: TRIGGERED
+  322.978 RX z_min: open
+  322.978 RX a_min: open
+  322.978 RX ok
+  322.978 TX M119
+  323.078 RX Reporting endstop status
+  323.078 RX x_min: open
+  323.078 RX y_min: TRIGGERED
+  323.078 RX z_min: open
+  323.078 RX a_min: open
+  323.079 RX ok
+  323.079 TX M119
+  323.179 RX Reporting endstop status
+  323.179 RX x_min: open
+  323.179 RX y_min: TRIGGERED
+  323.179 RX z_min: open
+  323.179 RX a_min: open
+  323.179 RX ok
+  323.179 TX M119
+  323.279 RX Reporting endstop status
+  323.279 RX x_min: open
+  323.279 RX y_min: TRIGGERED
+  323.280 RX z_min: open
+  323.280 RX a_min: open
+  323.280 RX ok
+  323.280 TX M119
+  323.380 RX Reporting endstop status
+  323.380 RX x_min: open
+  323.380 RX y_min: TRIGGERED
+  323.380 RX z_min: open
+  323.380 RX a_min: open
+  323.380 RX ok
+  323.380 TX M119
+  323.480 RX Reporting endstop status
+  323.480 RX x_min: open
+  323.480 RX y_min: TRIGGERED
+  323.481 RX z_min: open
+  323.481 RX a_min: open
+  323.481 RX ok
+  323.481 TX M119
+  323.581 RX Reporting endstop status
+  323.581 RX x_min: open
+  323.581 RX y_min: TRIGGERED
+  323.581 RX z_min: open
+  323.581 RX a_min: open
+  323.581 RX ok
+  323.581 TX M119
+  323.681 RX Reporting endstop status
+  323.681 RX x_min: open
+  323.682 RX y_min: TRIGGERED
+  323.682 RX z_min: open
+  323.682 RX a_min: open
+  323.682 RX ok
+  323.682 TX M119
+  323.782 RX Reporting endstop status
+  323.782 RX x_min: open
+  323.782 RX y_min: TRIGGERED
+  323.782 RX z_min: open
+  323.782 RX a_min: open
+  323.782 RX ok
+  323.782 TX M119
+  323.882 RX Reporting endstop status
+  323.883 RX x_min: open
+  323.883 RX y_min: TRIGGERED
+  323.883 RX z_min: open
+  323.883 RX a_min: open
+  323.883 RX ok
+  323.883 TX M119
+  323.983 RX Reporting endstop status
+  323.983 RX x_min: open
+  323.983 RX y_min: TRIGGERED
+  323.983 RX z_min: open
+  323.983 RX a_min: open
+  323.983 RX ok
+  323.983 TX M119
+  324.083 RX Reporting endstop status
+  324.084 RX x_min: open
+  324.084 RX y_min: TRIGGERED
+  324.084 RX z_min: open
+  324.084 RX a_min: open
+  324.084 RX ok
+  324.084 TX M119
+  324.184 RX Reporting endstop status
+  324.184 RX x_min: open
+  324.185 RX y_min: TRIGGERED
+  324.185 RX z_min: open
+  324.185 RX a_min: open
+  324.185 RX ok
+  324.185 TX M119
+  324.285 RX Reporting endstop status
+  324.285 RX x_min: open
+  324.285 RX y_min: TRIGGERED
+  324.285 RX z_min: open
+  324.285 RX a_min: open
+  324.286 RX ok
+  324.286 TX M119
+  324.386 RX Reporting endstop status
+  324.386 RX x_min: open
+  324.386 RX y_min: TRIGGERED
+  324.386 RX z_min: open
+  324.387 RX a_min: open
+  324.387 RX ok
+  324.387 TX M119
+  324.487 RX Reporting endstop status
+  324.487 RX x_min: open
+  324.487 RX y_min: TRIGGERED
+  324.487 RX z_min: open
+  324.487 RX a_min: open
+  324.487 RX ok
+  324.488 TX M119
+  324.588 RX Reporting endstop status
+  324.588 RX x_min: open
+  324.588 RX y_min: TRIGGERED
+  324.588 RX z_min: open
+  324.588 RX a_min: open
+  324.588 RX ok
+  324.588 TX M119
+  324.689 RX Reporting endstop status
+  324.689 RX x_min: open
+  324.689 RX y_min: TRIGGERED
+  324.689 RX z_min: open
+  324.689 RX a_min: open
+  324.689 RX ok
+  324.689 TX M119
+  324.789 RX Reporting endstop status
+  324.790 RX x_min: open
+  324.790 RX y_min: TRIGGERED
+  324.790 RX z_min: open
+  324.790 RX a_min: open
+  324.790 RX ok
+  324.790 TX M119
+  324.890 RX Reporting endstop status
+  324.890 RX x_min: open
+  324.890 RX y_min: TRIGGERED
+  324.891 RX z_min: open
+  324.891 RX a_min: open
+  324.891 RX ok
+  324.891 TX M119
+  324.991 RX Reporting endstop status
+  324.991 RX x_min: open
+  324.991 RX y_min: TRIGGERED
+  324.991 RX z_min: open
+  324.991 RX a_min: open
+  324.992 RX ok
+  324.992 TX M119
+  325.092 RX Reporting endstop status
+  325.092 RX x_min: open
+  325.092 RX y_min: TRIGGERED
+  325.092 RX z_min: open
+  325.092 RX a_min: open
+  325.092 RX ok
+  325.093 TX M119
+  325.193 RX Reporting endstop status
+  325.193 RX x_min: open
+  325.193 RX y_min: TRIGGERED
+  325.193 RX z_min: open
+  325.193 RX a_min: open
+  325.193 RX ok
+  325.193 TX M119
+  325.293 RX Reporting endstop status
+  325.294 RX x_min: open
+  325.294 RX y_min: TRIGGERED
+  325.294 RX z_min: open
+  325.294 RX a_min: open
+  325.294 RX ok
+  325.294 TX M119
+  325.394 RX Reporting endstop status
+  325.394 RX x_min: open
+  325.394 RX y_min: TRIGGERED
+  325.394 RX z_min: open
+  325.394 RX a_min: open
+  325.394 RX ok
+  325.394 TX M119
+  325.494 RX Reporting endstop status
+  325.495 RX x_min: open
+  325.495 RX y_min: TRIGGERED
+  325.495 RX z_min: open
+  325.495 RX a_min: open
+  325.495 RX ok
+  325.495 TX M119
+  325.595 RX Reporting endstop status
+  325.595 RX x_min: open
+  325.595 RX y_min: TRIGGERED
+  325.595 RX z_min: open
+  325.595 RX a_min: open
+  325.595 RX ok
+  325.595 TX M119
+  325.696 RX Reporting endstop status
+  325.696 RX x_min: open
+  325.696 RX y_min: TRIGGERED
+  325.696 RX z_min: open
+  325.696 RX a_min: open
+  325.696 RX ok
+  325.696 TX M119
+  325.796 RX Reporting endstop status
+  325.796 RX x_min: open
+  325.796 RX y_min: TRIGGERED
+  325.797 RX z_min: open
+  325.797 RX a_min: open
+  325.797 RX ok
+  325.797 TX M119
+  325.897 RX Reporting endstop status
+  325.897 RX x_min: open
+  325.897 RX y_min: TRIGGERED
+  325.897 RX z_min: open
+  325.898 RX a_min: open
+  325.898 RX ok
+  325.898 TX M119
+  325.998 RX Reporting endstop status
+  325.999 RX x_min: open
+  325.999 RX y_min: TRIGGERED
+  325.999 RX z_min: open
+  325.999 RX a_min: open
+  325.999 RX ok
+  325.999 TX M119
+  326.099 RX Reporting endstop status
+  326.099 RX x_min: open
+  326.099 RX y_min: TRIGGERED
+  326.099 RX z_min: open
+  326.100 RX a_min: open
+  326.100 RX ok
+  326.100 TX M119
+  326.200 RX Reporting endstop status
+  326.200 RX x_min: open
+  326.200 RX y_min: TRIGGERED
+  326.200 RX z_min: open
+  326.200 RX a_min: open
+  326.200 RX ok
+  326.200 TX M119
+  326.301 RX Reporting endstop status
+  326.301 RX x_min: open
+  326.301 RX y_min: TRIGGERED
+  326.301 RX z_min: open
+  326.301 RX a_min: open
+  326.301 RX ok
+  326.301 TX M119
+  326.402 RX Reporting endstop status
+  326.402 RX x_min: open
+  326.402 RX y_min: TRIGGERED
+  326.402 RX z_min: open
+  326.402 RX a_min: open
+  326.402 RX ok
+  326.402 TX M119
+  326.502 RX Reporting endstop status
+  326.502 RX x_min: open
+  326.502 RX y_min: TRIGGERED
+  326.503 RX z_min: open
+  326.503 RX a_min: open
+  326.503 RX ok
+  326.503 TX M119
+  326.603 RX Reporting endstop status
+  326.604 RX x_min: open
+  326.604 RX y_min: TRIGGERED
+  326.604 RX z_min: open
+  326.604 RX a_min: open
+  326.604 RX ok
+  326.604 TX M119
+  326.704 RX Reporting endstop status
+  326.704 RX x_min: open
+  326.704 RX y_min: TRIGGERED
+  326.705 RX z_min: open
+  326.705 RX a_min: open
+  326.705 RX ok
+  326.705 TX M119
+  326.805 RX Reporting endstop status
+  326.805 RX x_min: open
+  326.805 RX y_min: TRIGGERED
+  326.805 RX z_min: open
+  326.806 RX a_min: open
+  326.806 RX ok
+  326.806 TX M119
+  326.906 RX Reporting endstop status
+  326.907 RX x_min: open
+  326.907 RX y_min: TRIGGERED
+  326.907 RX z_min: open
+  326.907 RX a_min: open
+  326.907 RX ok
+  326.907 TX M119
+  327.008 RX Reporting endstop status
+  327.008 RX x_min: open
+  327.008 RX y_min: TRIGGERED
+  327.008 RX z_min: open
+  327.008 RX a_min: open
+  327.008 RX ok
+  327.008 TX M119
+  327.108 RX Reporting endstop status
+  327.108 RX x_min: open
+  327.108 RX y_min: TRIGGERED
+  327.108 RX z_min: open
+  327.108 RX a_min: open
+  327.108 RX ok
+  327.109 TX M119
+  327.209 RX Reporting endstop status
+  327.209 RX x_min: open
+  327.209 RX y_min: TRIGGERED
+  327.209 RX z_min: open
+  327.209 RX a_min: open
+  327.209 RX ok
+  327.209 TX M119
+  327.309 RX Reporting endstop status
+  327.309 RX x_min: open
+  327.309 RX y_min: TRIGGERED
+  327.309 RX z_min: open
+  327.309 RX a_min: open
+  327.309 RX ok
+  327.309 TX M119
+  327.410 RX Reporting endstop status
+  327.410 RX x_min: open
+  327.410 RX y_min: TRIGGERED
+  327.410 RX z_min: open
+  327.410 RX a_min: open
+  327.410 RX ok
+  327.410 TX M119
+  327.511 RX Reporting endstop status
+  327.511 RX x_min: open
+  327.511 RX y_min: TRIGGERED
+  327.511 RX z_min: open
+  327.511 RX a_min: open
+  327.511 RX ok
+  327.511 TX M119
+  327.612 RX Reporting endstop status
+  327.612 RX x_min: open
+  327.612 RX y_min: TRIGGERED
+  327.612 RX z_min: open
+  327.612 RX a_min: open
+  327.612 RX ok
+  327.612 TX M119
+  327.712 RX Reporting endstop status
+  327.712 RX x_min: open
+  327.713 RX y_min: TRIGGERED
+  327.713 RX z_min: open
+  327.713 RX a_min: open
+  327.713 RX ok
+  327.713 TX M119
+  327.813 RX Reporting endstop status
+  327.813 RX x_min: open
+  327.814 RX y_min: TRIGGERED
+  327.814 RX z_min: open
+  327.814 RX a_min: open
+  327.814 RX ok
+  327.814 TX M119
+  327.914 RX Reporting endstop status
+  327.914 RX x_min: open
+  327.915 RX y_min: TRIGGERED
+  327.915 RX z_min: open
+  327.915 RX a_min: open
+  327.915 RX ok
+  327.915 TX M119
+  328.015 RX Reporting endstop status
+  328.015 RX x_min: open
+  328.015 RX y_min: TRIGGERED
+  328.016 RX z_min: open
+  328.016 RX a_min: open
+  328.016 RX ok
+  328.016 TX M400
+  328.116 RX ok
+  328.116 TX G90
+  328.216 RX ok
+  328.216 TX M211 S1
+  328.317 RX ok
+  328.317 TX M114
+  328.417 RX X:0.00 Y:0.00 Z:0.00 A:-19.00 Count X:0 Y:0 Z:0 A:-30400
+  328.417 RX ok
+  328.417 TX M119
+  328.517 RX Reporting endstop status
+  328.517 RX x_min: open
+  328.517 RX y_min: TRIGGERED
+  328.518 RX z_min: open
+  328.518 RX a_min: open
+  328.518 RX ok
+  328.518 TX M400
+  328.618 RX ok
+  328.618 TX M84
+  328.718 RX ok
+  328.718 DONE rerouted-cables-downward-10mm

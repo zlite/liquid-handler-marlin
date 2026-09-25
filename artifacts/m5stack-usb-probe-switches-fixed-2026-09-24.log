@@ -1,0 +1,38 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+SPI 1 MHz: rev 0x13
+SPI 4 MHz: rev 0x13
+SPI 8 MHz: rev 0x13
+SPI 26 MHz: rev 0x13
+Read-only probe: 250000 bps
+MAX3421E init: OK
+Serial mount: success=1 baud=250000
+USB attached: address=1 VID:PID=1a86:7523
+TX: M115
+FIRMWARE_NAME:Marlin bugfix-2.1.x Liquid Handler R5 (Sep 23 2026 16:11:09) SOURCE_CODE_URL:githuler KINEMATICS:Cartesian EXTRUDEY_FILE_TRANSFER:0
+Cap:EEPROM:1
+CCap:AUTOLEVEL:0
+Cap:RUNOUT:0
+CapCASE_LIGHT_BRIGHTNESS:0
+Cap:EMERME:0
+Cap:REPEAT:0
+Cap:SD_WRITE:1:EXTENDED_M20:0
+Cap:THERMAL_PROTMPERATURE:0
+Cap:COOLER_TEMPERATUTX: M114
+X:0.00 Y:0.00 Z:0.00 A:0.00 Count X:0 Y:0 Z:0 A:0
+ok
+TX: M119
+Reporting endstop status
+x_min: open
+y_min: open
+z_min: open
+a_mProbe: serial=mounted baud=250000 queries=3
+Probe: serial=mounted baud=250000 queries=3

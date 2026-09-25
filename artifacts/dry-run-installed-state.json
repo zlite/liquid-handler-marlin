@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "name": "96-well plate",
+  "notes": "",
+  "rows": 8,
+  "columns": 12,
+  "nominalPitchMm": 9,
+  "units": "mm",
+  "plateVerified": false,
+  "heightsValid": true,
+  "points": {
+    "a1": {
+      "x": 111,
+      "y": 110,
+      "z": 45,
+      "a": 0
+    },
+    "a12": {
+      "x": 111,
+      "y": 208,
+      "z": 45,
+      "a": 0
+    },
+    "h1": {
+      "x": 174,
+      "y": 110,
+      "z": 45,
+      "a": 0
+    },
+    "h12": {
+      "x": 172,
+      "y": 208,
+      "z": 45,
+      "a": 0
+    },
+    "reservoir": {
+      "x": 72,
+      "y": 178,
+      "z": 35,
+      "a": 0
+    },
+    "dispense": {
+      "x": 112,
+      "y": 178,
+      "z": 42,
+      "a": 0
+    },
+    "travel": {
+      "x": 72,
+      "y": 178,
+      "z": 55,
+      "a": 0
+    }
+  },
+  "ready": true,
+  "busy": false,
+  "message": "Checking Marlin replies complete \u00b7 motors released",
+  "dryRunning": false,
+  "dryVisit": 0,
+  "dryStopRequested": false,
+  "xyHomed": false,
+  "zHomed": false,
+  "saved": true,
+  "log": "Teaching UI: http://192.168.68.67\nCH340 detected \u00b7 waiting for Marlin\nOperation: Checking Marlin replies\nTX M110 N0\nRX ok\nTX M115\nRX FIRMWARE_NAME:Marlin bugfix-2.1.x Liquid Handler R5 (Sep 23 2026 16:11:09) SOURCE_CODE_URL:github.com/MarlinFirmware/Marlin PROTOCOL_VERSION:1.0 MACHINE_TYPE:Liquid Handler KINEMATICS:Cartesian EXTRUDER_COUNT:0 AXIS_COUNT:4 UUID:cede2a2f-41a2-4748-9b12-c55c62f367ff\nRX Cap:SERIAL_XON_XOFF:0\nRX Cap:BINARY_FILE_TRANSFER:0\nRX Cap:EEPROM:1\nRX Cap:VOLUMETRIC:0\nRX Cap:AUTOREPORT_POS:0\nRX Cap:AUTOREPORT_TEMP:0\nRX Cap:PROGRESS:0\nRX Cap:PRINT_JOB:1\nRX Cap:AUTOLEVEL:0\nRX Cap:RUNOUT:0\nRX Cap:Z_PROBE:0\nRX Cap:LEVELING_DATA:0\nRX Cap:BUILD_PERCENT:0\nRX Cap:SOFTWARE_POWER:0\nRX Cap:TOGGLE_LIGHTS:0\nRX Cap:CASE_LIGHT_BRIGHTNESS:0\nRX Cap:EMERGENCY_PARSER:0\nRX Cap:HOST_ACTION_COMMANDS:1\nRX Cap:PROMPT_SUPPORT:1\nRX Cap:SDCARD:1\nRX Cap:MULTI_VOLUME:0\nRX Cap:REPEAT:0\nRX Cap:SD_WRITE:1\nRX Cap:AUTOREPORT_SD_STATUS:0\nRX Cap:LONG_FILENAME:0\nRX Cap:LFN_WRITE:0\nRX Cap:CUSTOM_FIRMWARE_UPLOAD:0\nRX Cap:EXTENDED_M20:0\nRX Cap:THERMAL_PROTECTION:1\nRX Cap:MOTION_MODES:0\nRX Cap:ARCS:1\nRX Cap:BABYSTEPPING:0\nRX Cap:EP_BABYSTEP:0\nRX Cap:CHAMBER_TEMPERATURE:0\nRX Cap:COOLER_TEMPERATURE:0\nRX Cap:MEATPACK:0\nRX Cap:CONFIG_EXPORT:0\nRX ok\nTX M114\nRX X:112.00 Y:178.00 Z:42.00 A:0.00 Count X:8960 Y:14240 Z:16800 A:0\nRX ok\nTX M114\nRX X:112.00 Y:178.00 Z:42.00 A:0.00 Count X:8960 Y:14240 Z:16800 A:0\nRX ok\nTX M114\nRX X:112.00 Y:178.00 Z:42.00 A:0.00 Count X:8960 Y:14240 Z:16800 A:0\nRX ok\nTX M114\nRX X:112.00 Y:178.00 Z:42.00 A:0.00 Count X:8960 Y:14240 Z:16800 A:0\nRX ok\nTX M114\nRX X:112.00 Y:178.00 Z:42.00 A:0.00 Count X:8960 Y:14240 Z:16800 A:0\nRX ok\nTX M114\nRX X:112.00 Y:178.00 Z:42.00 A:0.00 Count X:8960 Y:14240 Z:16800 A:0\nRX ok\nTX M114\nRX X:112.00 Y:178.00 Z:42.00 A:0.00 Count X:8960 Y:14240 Z:16800 A:0\nRX ok\nTX M114\nRX X:112.00 Y:178.00 Z:42.00 A:0.00 Count X:8960 Y:14240 Z:16800 A:0\nRX ok\nTX M114\nRX X:112.00 Y:178.00 Z:42.00 A:0.00 Count X:8960 Y:14240 Z:16800 A:0\nRX ok\nTX M114\nRX X:112.00 Y:178.00 Z:42.00 A:0.00 Count X:8960 Y:14240 Z:16800 A:0\nRX ok\nTX M400\nRX ok\nTX M84\nRX ok\nChecking Marlin replies complete \u00b7 motors released\nTX M119\nRX Reporting endstop status\nRX x_min: open\nRX y_min: open\nRX z_min: open\nRX a_min: open\nRX ok\nTX M119\nRX Reporting endstop status\nRX x_min: open\nRX y_min: open\nRX z_min: open\nRX a_min: open\nRX ok\nTX M119\nRX Reporting endstop status\nRX x_min: open\nRX y_min: open\nRX z_min: open\nRX a_min: open\nRX ok\nTX M119\nRX Reporting endstop status\nRX x_min: open\nRX y_min: open\nRX z_min: open\nRX a_min: open\nRX ok\nTX M119\nRX Reporting endstop status\nRX x_min: open\nRX y_min: open\nRX z_min: open\nRX a_min: open\nRX ok\n",
+  "aLimit": "open",
+  "aLimitFresh": true,
+  "aLimitSamples": 5,
+  "aLimitAgeMs": 96,
+  "position": {
+    "x": 112,
+    "y": 178,
+    "z": 42,
+    "a": 0
+  },
+  "geometry": "H12 check error: 2.00 mm. Above 1 mm; check and recapture the points.",
+  "heights": "Heights saved. Confirm the travel path clears all obstacles."
+}
