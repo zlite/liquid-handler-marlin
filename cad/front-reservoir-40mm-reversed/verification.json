@@ -1,0 +1,56 @@
+{
+  "cadquery": "2.8.0",
+  "python": "3.12.12",
+  "brim_capacity_ml": 80.408,
+  "reference_fill_ml": 10,
+  "front_edge_alignment_y_mm": 112.74000000000001,
+  "outside_cup_mm": [
+    50.0,
+    50.0,
+    40.0
+  ],
+  "floor_mm": 2.0,
+  "cup_center_cad_xy": [
+    183.0,
+    87.74000000000001
+  ],
+  "plate_center_cad_xy": [
+    76.0,
+    70.0
+  ],
+  "assembly_interference_mm3": 0,
+  "mounting_holes_clear": true,
+  "meshes": {
+    "LH_deck_four_bolt": {
+      "watertight": true,
+      "bounds_mm": [
+        207.27999687194824,
+        186.0,
+        14.199999809265137
+      ]
+    },
+    "LH_reservoir_40mm": {
+      "watertight": true,
+      "bounds_mm": [
+        50.0,
+        50.0,
+        40.0
+      ]
+    }
+  },
+  "sha256": {
+    "LH_deck.step": "25d3699c4cff78fcbe514e419287f4e9afffd6b300bbc719e01a2e5335d378d6",
+    "LH_deck.stl": "724092bbdc9832386cea8d3d557eee605620d531b1218feec605c61f049caefd",
+    "LH_deck_assembly.step": "4e0cda4ecaec2d348a4c5090fee23bd120b90e32491a4f3c38e142115676b52d",
+    "LH_deck_four_bolt.step": "cd7d871ccfc505d9d48f87d2a12882d2b300122d61ebe22ec0a1a96ad780a811",
+    "LH_deck_four_bolt.stl": "8d685cf08f92e91977c3818a2dce677f0c7829054ebcbde82e5eedc6ce206fd4",
+    "LH_deck_four_bolt_assembly.step": "17f6b5589a51f35c67c99237483babb2cecd971a60d7836163d4db8968f8d94f",
+    "LH_optional_plate_fit_gauge.stl": "6a6047cf47cdc178cfddbadc934d3e75332242b5f5819fe7f47e71fc986e21bf",
+    "LH_reservoir_40mm.step": "f7b8b9178f96cf6152513bfce51511f01632f3e86eef0fa79a52cfb076036bcf",
+    "LH_reservoir_40mm.stl": "43e14d5a6735f04b28f09b71f6fc67bd1b246254c03de6ce52ac462afc522098",
+    "build_four_bolt_deck.py": "120b6d456acc91d5c2be30eb5eec38838d645c455afd4ecef5d4d0ecc9876a42",
+    "build_liquid_handler_deck.py": "bde3672fa18e02f205da0c0090fe66c21cc8aaddaed12db337330b17b8097337",
+    "render_deck.py": "4196678659e807153936380cc65b21240ccd933a25c35169a294d2ba40140044",
+    "verify.py": "367c9ea278cb0ba5cf06bdb67db92c35e0676bf3d4511e183407337d54675531"
+  }
+}

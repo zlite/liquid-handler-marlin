@@ -89,6 +89,39 @@ shared height, assuming a level plate. Nominal center spans are 99 and 63 mm;
 geometry checks allow ±3 mm and 3 degrees of squareness. These checks catch
 large teaching mistakes, not guarantee pipetting accuracy.
 
+## Syringe calibration
+
+The teach page supports a 1 mL (1,000 µL) syringe and 100 µL doses. Position
+the tip over a container and use **Home syringe · empty**. This homes only A,
+using the measured 1600 steps/mm; the mechanical endstop must correspond to
+an empty syringe. XYZ remain stationary. Jog A upward in 0.1 or 1 mm steps
+until the plunger reaches the **300 µL (0.3 mL)** graduation, then **Capture
+300 µL**.
+Positive A aspirates and negative A dispenses. Observe travel: before capture,
+only the firmware's 100 mm A bound is known, not the syringe's physical stroke.
+After capture, syringe jogs are limited to the taught full position.
+
+The measured 300 µL travel is captured relative to empty A=0. The full 1 mL
+stroke is calculated as measured travel × 10/3; each 100 µL dose uses one third
+of measured travel, toward home. For example, a 300 µL capture at A1.2 yields
+full A4 and 0.4 mm per dose. Captures whose inferred full stroke exceeds 100 mm
+are rejected. Older full-stroke calibrations remain unchanged until recaptured;
+JSON records the reference volume and reference A position. A fresh capture
+uses the `capture_syringe_300` API action; the old action is rejected so stale
+pages cannot silently reinterpret a 1 mL capture as 300 µL. Capture uses M400/M114/M84 and saves only after release
+is acknowledged. Homing and jogs also finish with M400/M114/M84. Calibration
+persists in NVS and the JSON export's `syringe` object; older saved deck
+calibrations load without a syringe calibration. **Clear syringe calibration
+only** retains deck teaching and permits reteaching a longer stroke.
+
+Session A homing is required for syringe jogs/capture and is invalidated by
+reconnects, faults, unmeasured movement, and A motion/calibration diagnostics.
+Released axes can move without detection; re-home if the plunger has shifted.
+A saved stroke is a displacement estimate; verify actual delivered liquid volume
+before use. The full plate dispensing operation is described below.
+The existing route visits eight wells per fill, requiring 800 µL; twelve wells
+would require 1,200 µL and cannot use a single 1 mL fill. The wet run uses the same eight-well groups.
+
 ## Dry trial
 
 The dry-run control visits the reservoir, then A1 through H1, and repeats for
@@ -145,3 +178,52 @@ see `../artifacts/teaching-http-validation.json`. Geometry/parser tests cover ro
 malformed replies, skew, and travel limits. Physical homing, jogging, and
 labware calibration require operator observation and have not been exercised
 by this installation. This supersedes the older TinyUSB probe for teaching.
+
+## Dispense a plate
+
+Use **Dispense full plate · 100 µL/well** after homing X/Y, Z, and A and
+calibrating the deck and syringe. No automatic motion occurs on boot or upload.
+Wet runs require all seven deck points, the normal 1 mm H12 check, and travel Z no higher than 100 mm. The separate
+**Allow H12 error up to 2 mm for this dispensing run only** checkbox permits
+up to 2 mm for that run. It does not change saved points or mark the plate
+verified; all other validation and homing requirements remain in effect.
+
+The route is twelve groups: A1–H1, A2–H2, … A12–H12. At the taught reservoir
+location/depth, move A to empty (0) then aspirate the full 1 mL stroke. Dispense
+one tenth of the stroke per well. After eight wells, return to the reservoir,
+empty the remaining 200 µL, and refill. After H12, return and empty once more,
+then raise to **absolute Z = 100 mm** and finish with M400/M84.
+For a 4 mm stroke, full is A4, each dose subtracts 0.4 mm, and each
+group ends at A0.8 before purging. Returning to empty uses G1 A0, not G28.
+
+Reservoir trips lift to travel Z before XY moves; the initial lift never lowers
+from an already higher Z. Adjacent wells retain dispense Z as in the dry run.
+XY requests 500 mm/s, Z 5 mm/s, and A 10 commanded mm/s (F600, ten times the
+previous F60). The run sets M203 A10, restoring the measured idle limit M203 A5
+at normal completion or an orderly stop. This is not saved to EEPROM. A fault
+may interrupt restoration; no recovery motion is issued. Teaching jogs and
+homing speeds are unchanged. Steps/mm and saved syringe calibration are not
+changed: with the finer screw and A1600, these A units are not physical mm.
+Verify actual liquid delivery, missed steps, bubbles and leaks at the higher
+speed before a full plate. Acceleration can limit the speedup of short moves.
+Motors stay enabled across the
+continuous run and release only at the end or a requested stop. Status reports
+completed wells. No job automatically resumes after a fault or restart.
+
+**Stop after current location** completes that location (including its fluid
+movement), then raises to Z100 and releases. It retains any remaining syringe
+fluid and does not purge/refill or visit another well. It is not an emergency
+stop. A communication fault instead cancels the sequence and attempts an
+ordered motor release without commanding further positioning.
+
+Verify physical liquid delivery and tip priming before dispensing valuable
+samples; the controller has no flow or position encoders. The 96 wells receive
+9.6 mL nominal total; reservoir liquid must also keep the tip submerged during
+the final full-syringe aspiration. Re-home if released axes have shifted.
+
+Host-side sequence test:
+
+```sh
+g++ -std=c++11 -I m5stack-controller/include m5stack-controller/test/test_wet_run.cpp -o /tmp/test-wet-run
+/tmp/test-wet-run
+```

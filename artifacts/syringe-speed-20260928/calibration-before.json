@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "name": "96-well plate",
+  "notes": "",
+  "rows": 8,
+  "columns": 12,
+  "nominalPitchMm": 9,
+  "units": "mm",
+  "plateVerified": true,
+  "heightsValid": false,
+  "syringe": {
+    "capacityUl": 1000,
+    "doseUl": 100,
+    "emptyA": 0,
+    "calibrated": true,
+    "fullA": 57.33334,
+    "strokeMm": 57.33334,
+    "doseTravelMm": 5.733335,
+    "referenceUl": 300,
+    "referenceA": 17.2
+  },
+  "points": {
+    "a1": {
+      "x": 109,
+      "y": 104,
+      "z": 37,
+      "a": 31
+    },
+    "a12": {
+      "x": 109,
+      "y": 204,
+      "z": 37,
+      "a": 31
+    },
+    "h1": {
+      "x": 172,
+      "y": 104,
+      "z": 37,
+      "a": 31
+    },
+    "h12": {
+      "x": 172,
+      "y": 205,
+      "z": 37,
+      "a": 31
+    },
+    "reservoir": {
+      "x": 72,
+      "y": 158,
+      "z": 69,
+      "a": 57.33
+    },
+    "dispense": {
+      "x": 112,
+      "y": 178,
+      "z": 42,
+      "a": 0
+    },
+    "travel": {
+      "x": 20,
+      "y": 60,
+      "z": 65,
+      "a": 0
+    }
+  }
+}

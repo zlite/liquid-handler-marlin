@@ -33,3 +33,24 @@ inline bool validPlate(Position a1,Position a12,Position h1){
     if(!inside(wellPosition(a1,a12,h1,r,c)))return false;
   return true;
 }
+
+// A=0 is the mechanically homed, empty syringe. Positive A aspirates.
+constexpr float SYRINGE_CAPACITY_UL=1000.0f, SYRINGE_DOSE_UL=100.0f;
+constexpr float SYRINGE_MAX_A_MM=100.0f;
+inline bool validSyringeFull(float full){
+  return std::isfinite(full)&&full>=0.1f&&full<=SYRINGE_MAX_A_MM;
+}
+constexpr float SYRINGE_REFERENCE_UL=300.0f;
+inline float syringeFullFromReference(float referenceA){
+  const float full=referenceA*(SYRINGE_CAPACITY_UL/SYRINGE_REFERENCE_UL);
+  return std::isfinite(referenceA)&&referenceA>=0.1f&&validSyringeFull(full)?full:NAN;
+}
+inline float syringeDoseTravel(float full){
+  return validSyringeFull(full)?full*SYRINGE_DOSE_UL/SYRINGE_CAPACITY_UL:NAN;
+}
+inline bool validSyringeJog(float current,float delta,float full){
+  if(!std::isfinite(current)||!std::isfinite(delta))return false;
+  if(!(std::fabs(delta)==1.0f||std::fabs(std::fabs(delta)-0.1f)<1e-6f))return false;
+  const float limit=validSyringeFull(full)?full:SYRINGE_MAX_A_MM;
+  return current+delta>=0&&current+delta<=limit;
+}

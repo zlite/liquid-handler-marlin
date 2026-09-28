@@ -1,0 +1,56 @@
+{
+  "cadquery": "2.8.0",
+  "python": "3.12.12",
+  "brim_capacity_ml": 80.408,
+  "reference_fill_ml": 10,
+  "front_edge_alignment_y_mm": 27.259999999999998,
+  "outside_cup_mm": [
+    50.0,
+    50.0,
+    40.0
+  ],
+  "floor_mm": 2.0,
+  "cup_center_cad_xy": [
+    183.0,
+    52.26
+  ],
+  "plate_center_cad_xy": [
+    76.0,
+    70.0
+  ],
+  "assembly_interference_mm3": 0,
+  "mounting_holes_clear": true,
+  "meshes": {
+    "LH_deck_four_bolt": {
+      "watertight": true,
+      "bounds_mm": [
+        207.27999687194824,
+        186.0,
+        14.199999809265137
+      ]
+    },
+    "LH_reservoir_40mm": {
+      "watertight": true,
+      "bounds_mm": [
+        50.0,
+        50.0,
+        40.0
+      ]
+    }
+  },
+  "sha256": {
+    "LH_deck.step": "317554f6f5be7c1c2d041b87b8130ce73a84546bdd04bee34a305f7ae6158982",
+    "LH_deck.stl": "e37ef38b96e145b22f3bde05e56cb74666f01e43cd64c3c9f411efe185e6ccc3",
+    "LH_deck_assembly.step": "e779bb84a56e19452450b660a75be657175b92c5e783da3c04250d5690f11383",
+    "LH_deck_four_bolt.step": "f4c57f41920a7515fe3c50434f9bbbff1ef402616639b24608b4bb98055faa07",
+    "LH_deck_four_bolt.stl": "7ad9725f0d370eb9556328a26fd56779030d16651e9a5158fcc5dce728522506",
+    "LH_deck_four_bolt_assembly.step": "57a072fd9cad71be000511b2deb5148d9838c9cf14bc8164d68ea24f50244dca",
+    "LH_optional_plate_fit_gauge.stl": "6a6047cf47cdc178cfddbadc934d3e75332242b5f5819fe7f47e71fc986e21bf",
+    "LH_reservoir_40mm.step": "86734137599e7f5179a3b2f34af8841734b1f0b0bc15531b88720414b1ffb1e3",
+    "LH_reservoir_40mm.stl": "43e14d5a6735f04b28f09b71f6fc67bd1b246254c03de6ce52ac462afc522098",
+    "build_four_bolt_deck.py": "120b6d456acc91d5c2be30eb5eec38838d645c455afd4ecef5d4d0ecc9876a42",
+    "build_liquid_handler_deck.py": "a0f6fd71ed13924866aebe90bcb20310ef8bf7b3248b987f497324f07451ea0b",
+    "render_deck.py": "4196678659e807153936380cc65b21240ccd933a25c35169a294d2ba40140044",
+    "verify.py": "7d7c27997c167b097611a3c50f9e2e177356151f66c368e7fdc1f5d513ef88d2"
+  }
+}

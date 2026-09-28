@@ -7,6 +7,7 @@
 #include "ch340_host.h"
 #include "teaching.h"
 #include "dry_run.h"
+#include "wet_run.h"
 #include "web_page.h"
 #if __has_include("network_secrets.h")
 #include "network_secrets.h"
@@ -24,6 +25,8 @@ constexpr char A_CALIBRATION[]="M92 A1600";
 const char *pointNames[]={"a1","a12","h1","h12","reservoir","dispense","travel"};
 Position points[7],position,candidate;
 bool present[7]={},havePosition=false,ready=false,connected=false,xyHomed=false,zHomed=false;
+bool aHomed=false;
+float syringeFull=NAN,syringeReferenceUl=1000.0f;
 bool busy=false,awaiting=false,positionSeen=false,identitySeen=false,saved=false,mdns=false;
 String calName="96-well plate",notes,message="Starting USB",logText,job;
 String commands[24];unsigned commandCount=0,commandIndex=0,lineNumber=0,capabilities=0;
@@ -43,6 +46,8 @@ bool samplingCommand(){return (job==HOLD_TEST&&commandIndex==4)||(job==MOTION_TE
 String aHomingTrace;
 bool dryRunning=false,dryStop=false;
 unsigned dryVisit=0;
+bool wetRunning=false,wetStop=false;
+unsigned wetVisit=0,wetWellsDone=0;
 
 bool aLimitFresh(){return connected&&ready&&aLimitKnown&&millis()-aLimitAt<LIMIT_STALE_MS;}
 
@@ -63,6 +68,15 @@ bool heightsOK(){return present[4]&&present[5]&&present[6]&&points[6].z>points[4
 void calibration(JsonDocument &d){
   d["schema"]=1;d["name"]=calName;d["notes"]=notes;d["rows"]=8;d["columns"]=12;d["nominalPitchMm"]=9;
   d["units"]="mm";d["plateVerified"]=plateVerified();d["heightsValid"]=heightsOK();
+  auto syringe=d["syringe"].to<JsonObject>();
+  syringe["capacityUl"]=SYRINGE_CAPACITY_UL;syringe["doseUl"]=SYRINGE_DOSE_UL;
+  syringe["emptyA"]=0;syringe["calibrated"]=validSyringeFull(syringeFull);
+  if(validSyringeFull(syringeFull)){
+    syringe["fullA"]=syringeFull;syringe["strokeMm"]=syringeFull;
+    syringe["doseTravelMm"]=syringeDoseTravel(syringeFull);
+    syringe["referenceUl"]=syringeReferenceUl;
+    syringe["referenceA"]=syringeFull*syringeReferenceUl/SYRINGE_CAPACITY_UL;
+  }
   auto ps=d["points"].to<JsonObject>();
   for(unsigned i=0;i<7;i++)if(present[i])serializePosition(ps[pointNames[i]].to<JsonObject>(),points[i]);
   if(plateVerified()&&heightsOK()){
@@ -88,13 +102,20 @@ void load(){
     Position v{p["x"].as<float>(),p["y"].as<float>(),p["z"].as<float>(),p["a"].as<float>()};
     if(inside(v)&&std::isfinite(v.a)){points[i]=v;present[i]=true;}
   }
+  float full=d["syringe"]["fullA"]|NAN;
+  if(validSyringeFull(full)){
+    syringeFull=full;
+    // Existing full-stroke calibrations retain their original meaning.
+    syringeReferenceUl=d["syringe"]["referenceUl"]|1000.0f;
+    if(syringeReferenceUl!=300.0f&&syringeReferenceUl!=1000.0f)syringeReferenceUl=1000.0f;
+  }
   saved=true;
 }
 void fail(const String &reason){
   if(message.startsWith("Connection fault:"))return;
-  dryRunning=false;
+  dryRunning=wetRunning=false;
   message="Connection fault: "+reason+". Reconnect USB to recheck.";
-  logMessage(message);busy=awaiting=ready=false;xyHomed=zHomed=false;havePosition=false;
+  logMessage(message);busy=awaiting=ready=false;xyHomed=zHomed=aHomed=false;havePosition=false;
   aLimitKnown=false;
   // Best effort ordered release, never replay a timed-out movement.
   if(connected){ender.write((job=="Move A down 5 mm"||job==MOTION_TEST)?"M400\nG90\nM211 S1\nM84\n":"M400\nM84\n");}
@@ -119,11 +140,31 @@ void nextDryVisit(){
       "G1 X"+String(p.x,3)+" Y"+String(p.y,3)+" F30000","M400","M114"});
   }
 }
+void nextWetVisit(){
+  String label;
+  if(wetVisit==WET_PARK_VISIT)label=wetStop?"stopped; parking Z100":"finished; parking Z100";
+  else if(wetVisit==WET_PURGE_VISIT)label="final reservoir purge";
+  else if(wetVisit%9==0)label="group "+String(wetVisit/9+1)+"/12: purge and fill 1 mL";
+  else label=String(char('A'+wetVisit%9-1))+String(wetVisit/9+1)+": dispense 100 uL";
+  WetBatch batch=wetRunBatch(points,syringeFull,wetVisit,position.z);
+  beginJob("Dispense "+label,{});
+  for(unsigned i=0;i<batch.count;i++)commands[commandCount++]=batch.commands[i];
+}
 void startCheck(){
   lineNumber=0;identitySeen=false;capabilities=0;
   beginJob("Checking Marlin replies",{"M110 N0","M115","M114","M114","M114","M114","M114","M114","M114","M114","M114","M114","M400","M84"});
 }
 void finishJob(){
+  if(wetRunning){
+    if(wetVisit<WET_PURGE_VISIT&&wetVisit%9)wetWellsDone++;
+    if(wetVisit==WET_PARK_VISIT){
+      wetRunning=false;
+      message=String(wetStop?"Dispense stopped":"Plate finished")+" · "+String(wetWellsDone)+"/96 wells · Z100 · motors released";
+      busy=false;logMessage(message);return;
+    }
+    wetVisit=wetStop?WET_PARK_VISIT:wetVisit+1;
+    nextWetVisit();return;
+  }
   if(dryRunning){
     if(!dryStop&&++dryVisit<DRY_VISITS){nextDryVisit();return;}
     dryRunning=false;
@@ -135,6 +176,19 @@ void finishJob(){
   if(job=="Checking Marlin replies")ready=true;
   if(job=="Home X/Y"||job=="Home all")xyHomed=true;
   if(job=="Home Z"||job=="Home all")zHomed=true;
+  if(job=="Home syringe"||job=="Home all"){
+    // A successful command must also report the empty home coordinate.
+    aHomed=havePosition&&std::fabs(position.a)<0.01f;
+    if(!aHomed){message="Syringe did not report A=0; re-home before teaching";busy=false;return;}
+  }
+  if(job=="Capture syringe 300 uL"){
+    if(!aHomed||!validSyringeFull(syringeFullFromReference(candidate.a))){
+      message="Invalid 300 uL position; inferred full stroke must be within 100 mm";busy=false;return;
+    }
+    float old=syringeFull,oldReference=syringeReferenceUl;
+    syringeFull=syringeFullFromReference(candidate.a);syringeReferenceUl=SYRINGE_REFERENCE_UL;
+    if(!persist()){syringeFull=old;syringeReferenceUl=oldReference;message="Storage failed; syringe calibration was not saved";busy=false;return;}
+  }
   if(captureIndex>=0){
     Position old=points[captureIndex];bool had=present[captureIndex],hadCheck=present[3];
     points[captureIndex]=candidate;present[captureIndex]=true;
@@ -189,7 +243,7 @@ void serviceUSB(){
   usb.Task();
   if(ender.connected()!=connected){
     connected=ender.connected();mountedAt=millis();inputLength=0;droppingLine=false;
-    ready=busy=awaiting=havePosition=xyHomed=zHomed=false;dryRunning=false;
+    ready=busy=awaiting=havePosition=xyHomed=zHomed=aHomed=false;dryRunning=wetRunning=false;
     aLimitKnown=false;
     message=connected?"CH340 detected · waiting for Marlin":"Ender disconnected";
     logMessage(message);
@@ -211,7 +265,7 @@ void serviceUSB(){
   }
   if(!busy&&!ready&&message=="CH340 detected · waiting for Marlin"&&millis()-mountedAt>2500&&millis()-lastRX>200)startCheck();
   if(awaiting){
-    uint32_t limit=commands[commandIndex].startsWith("G28")?180000:(dryRunning||job.startsWith("Dry run")||job.startsWith("Home "))?60000:10000;
+    uint32_t limit=(wetRunning||commands[commandIndex].startsWith("G28"))?180000:(dryRunning||job.startsWith("Dry run")||job.startsWith("Home ")||job=="Jog syringe")?60000:10000;
     if(millis()-sentAt>limit)fail("No acknowledgement for "+commands[commandIndex]);
   }else if(busy&&millis()-lastRX>15){
     if(samplingCommand()){
@@ -231,6 +285,12 @@ bool readBody(JsonDocument &d){if(web.arg("plain").length()>1024||deserializeJso
 void stateResponse(){
   JsonDocument d;calibration(d);d.remove("wells");d["ready"]=ready;d["busy"]=busy;d["message"]=message;
   d["dryRunning"]=dryRunning;d["dryVisit"]=dryVisit;d["dryStopRequested"]=dryStop;
+  d["wetRunning"]=wetRunning;d["wetStopRequested"]=wetStop;
+  d["wetWellsDone"]=wetWellsDone;d["wetVisit"]=wetVisit;d["parkZ"]=WET_PARK_Z;
+  bool wetCalibrated=true;for(bool p:present)if(!p)wetCalibrated=false;
+  d["wetCalibrationValid"]=wetCalibrated&&wetRunValid(points,syringeFull,position);
+  d["wetTrialCalibrationValid"]=wetCalibrated&&wetRunValid(points,syringeFull,position,true);
+  d["aHomed"]=aHomed;
   d["xyHomed"]=xyHomed;d["zHomed"]=zHomed;d["saved"]=saved;d["log"]=logText;
   d["aLimit"]=aLimitFresh()?(aLimitTriggered?"TRIGGERED":"open"):"unknown";
   d["aLimitFresh"]=aLimitFresh();d["aLimitSamples"]=aLimitSamples;
@@ -247,16 +307,25 @@ void action(){
   JsonDocument d;if(!readBody(d))return;
   String requested=d["action"]|"";
   if(requested=="stop_dry_run"&&dryRunning){dryStop=true;web.send(202,"application/json","{\"accepted\":true}");return;}
+  if(requested=="stop_wet_run"&&wetRunning){wetStop=true;web.send(202,"application/json","{\"accepted\":true}");return;}
   if(busy){error(409,"Wait for the current operation to finish");return;}
   if(!ready){error(409,"Marlin connection has not passed its checks");return;}
   String a=d["action"]|"";
-  if(a=="dry_run"){
+  if(a=="wet_run"){
+    if(!xyHomed||!zHomed||!aHomed||!havePosition){error(409,"Home X/Y, Z, and syringe before dispensing");return;}
+    for(bool p:present)if(!p){error(409,"Capture all seven deck points first");return;}
+    if(!wetRunValid(points,syringeFull,position,d["allowTwoMm"].as<bool>())){
+      error(409,"Dispensing requires syringe calibration, H12 error at most 1 mm (2 mm with the explicit override), valid deck heights with travel Z at most 100 mm, and A within the taught stroke");return;
+    }
+    wetVisit=wetWellsDone=0;wetStop=false;wetRunning=true;nextWetVisit();
+  }
+  else if(a=="dry_run"){
     if(!xyHomed||!zHomed||!havePosition){error(409,"Home X/Y and Z before the dry run");return;}
     for(bool p:present)if(!p){error(409,"Capture all seven calibration points first");return;}
     if(!dryRunValid(points,d["allowTwoMm"].as<bool>())){error(409,"Calibration failed dry-run checks; trial override allows H12 error up to 2 mm only");return;}
     dryVisit=0;dryStop=false;dryRunning=true;nextDryVisit();
   }
-  else if(a=="invalidate"){xyHomed=zHomed=false;havePosition=false;message="Re-home after unmeasured movement";}
+  else if(a=="invalidate"){xyHomed=zHomed=aHomed=false;havePosition=false;message="Re-home after unmeasured movement";}
   else if(a=="home_all"||a=="home_xy"||a=="home_z"){
     if(!present[6]||!std::isfinite(points[6].z)||points[6].z<=0||points[6].z>250||!havePosition){
       error(409,"A saved travel height and current position report are required before homing");return;
@@ -266,14 +335,37 @@ void action(){
     if(!referenced&&position.z+lift>250){error(409,"Clearance lift would exceed Z travel; establish Z from a clear position first");return;}
     String label=a=="home_all"?"Home all":a=="home_xy"?"Home X/Y":"Home Z";
     String home=a=="home_all"?"G28 R0":a=="home_xy"?"G28 X Y R0":"G28 Z R0";
+    if(a=="home_all")aHomed=false;
     if(a!="home_z")xyHomed=false;
     if(a!="home_xy")zHomed=false;
     beginJob(label,{"G21","M211 S1",referenced?"G90":"G91",
       "G1 Z"+String(lift,3)+" F300","M400","G90",home,"M400","M114","M400","M84"});
   }
+  else if(a=="home_syringe"){
+    aHomed=false;
+    beginJob("Home syringe",{"G21",A_CALIBRATION,"G90","M211 S1","G28 A R0","M400","M114","M84"});
+  }
+  else if(a=="jog_syringe"||a=="capture_syringe_300"){
+    if(!aHomed||!havePosition){error(409,"Home the syringe before jogging or capturing 300 uL");return;}
+    if(a=="capture_syringe_300"){
+      if(!validSyringeFull(syringeFullFromReference(position.a))){error(400,"Jog from empty to the 300 uL mark; inferred full stroke must be within 100 mm");return;}
+      beginJob("Capture syringe 300 uL",{"M400","M114","M84"});
+    }else{
+      float delta=d["delta"]|NAN;
+      if(!validSyringeJog(position.a,delta,syringeFull)){error(400,"Use 0.1 or 1 mm steps within the syringe travel; clear syringe calibration to teach a longer stroke");return;}
+      beginJob("Jog syringe",{"G21",A_CALIBRATION,"G90","M211 S1",
+        "G1 A"+String(position.a+delta,3)+" F60","M400","M114","M84"});
+    }
+  }
+  else if(a=="clear_syringe"){
+    float old=syringeFull;syringeFull=NAN;
+    if(!persist()){syringeFull=old;error(500,"Storage failed");return;}
+    message="Syringe calibration cleared; deck points retained";
+  }
   else if(a=="position")beginJob("Read position",{"M400","M114","M84"});
   else if(a=="endstops")beginJob("Read limit switches",{"M400","M119","M84"});
   else if(a=="home_a_diag"){
+    aHomed=false;
     if(!aLimitFresh()||aLimitTriggered){error(409,"A switch must have a fresh OPEN reading before this test");return;}
     aHomingTrace="";
     beginJob("Diagnose A homing",{"M400","M119","M503","G21","G28 A R0","M400","M114","M119","M84"});
@@ -283,6 +375,7 @@ void action(){
     beginJob("Read motion settings",{"M400","M503","M114","M119","M84"});
   }
   else if(a=="restore_a_steps"){
+    aHomed=false;
     aHomingTrace="";
     beginJob("Set A calibration",{"M400",A_CALIBRATION,"M503","M84"});
   }
@@ -292,6 +385,7 @@ void action(){
     beginJob(HOLD_TEST,{"M400","M114","M119","M17","M119","M400","M114","M84"});
   }
   else if(a=="motion_a_test"){
+    aHomed=false;
     if(!aLimitFresh()||aLimitTriggered){error(409,"A switch must have a fresh OPEN reading before this test");return;}
     aHomingTrace="";holdStartedAt=holdLastPoll=holdSamples=holdTriggers=0;
     // Ordinary G1 acknowledges once queued, allowing M119 during stepping.
@@ -299,6 +393,7 @@ void action(){
     beginJob(MOTION_TEST,{"M400",A_CALIBRATION,"M114","M119","M120","M211 S0","G21","G91","G1 A-5 F30","M119","M400","G90","M211 S1","M114","M119","M400","M84"});
   }
   else if(a=="move_a_down_5"){
+    aHomed=false;
     if(!aLimitFresh()||aLimitTriggered){error(409,"A switch must have a fresh OPEN reading before this test");return;}
     aHomingTrace="";
     // The reported A=0 from unsuccessful homing is not a physical reference.
@@ -337,7 +432,7 @@ void setupWeb(){
   web.on("/api/clear",HTTP_POST,[]{
     if(busy){error(409,"Wait for the operation to finish");return;}
     if(preferences.isKey("calibration")&&!preferences.remove("calibration")){error(500,"Storage failed");return;}
-    memset(present,0,sizeof(present));saved=false;web.send(200,"application/json","{}");
+    memset(present,0,sizeof(present));syringeFull=NAN;saved=false;web.send(200,"application/json","{}");
   });
   web.begin();
 }

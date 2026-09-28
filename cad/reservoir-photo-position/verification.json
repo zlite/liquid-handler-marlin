@@ -1,0 +1,57 @@
+{
+  "cadquery": "2.8.0",
+  "python": "3.12.12",
+  "brim_capacity_ml": 80.408,
+  "reference_fill_ml": 10,
+  "photo_bottom_alignment_cad_x_mm": 12.119999999999997,
+  "outside_cup_mm": [
+    50.0,
+    50.0,
+    40.0
+  ],
+  "floor_mm": 2.0,
+  "cup_center_cad_xy": [
+    37.12,
+    151.0
+  ],
+  "plate_center_cad_xy": [
+    76.0,
+    70.0
+  ],
+  "assembly_interference_mm3": 0,
+  "mounting_holes_clear": true,
+  "meshes": {
+    "LH_deck_four_bolt": {
+      "watertight": true,
+      "bounds_mm": [
+        202.57999992370605,
+        186.0,
+        14.199999809265137
+      ]
+    },
+    "LH_reservoir_40mm": {
+      "watertight": true,
+      "bounds_mm": [
+        50.0,
+        50.0,
+        40.0
+      ]
+    }
+  },
+  "sha256": {
+    "LH_deck.step": "12e6b6cfecf3fa87ce539c342df263af02ad7c37f8cd749755ddda96b8fd69b1",
+    "LH_deck.stl": "8d87c2347f887325f74d15c69a6d9665641ceb6704f34c8904d273853d10eb31",
+    "LH_deck_assembly.step": "a3c5ebe9af8f9bf2f910281bf7769b6dd399c709fbf66c1eeebd7ef0f18bed16",
+    "LH_deck_four_bolt.step": "f8473ce75beb75f8b9f01ea0f0eb4caf09d44cc7c5b5ef479a4a8af34c99ab8c",
+    "LH_deck_four_bolt.stl": "d5e386916926631277406adb9687536bf9186a0d03872cd7df26ac9222f37cef",
+    "LH_deck_four_bolt_assembly.step": "20bd7b7694621515afa0ec7f193f28ee1f69a10d7785817986f3c6e1d1550ab6",
+    "LH_optional_plate_fit_gauge.stl": "6a6047cf47cdc178cfddbadc934d3e75332242b5f5819fe7f47e71fc986e21bf",
+    "LH_reservoir_40mm.step": "b23cd176d9e3c0ebd19f23f6992909d3ce88ae8d9581621ef9fb1a1baa4e897f",
+    "LH_reservoir_40mm.stl": "43e14d5a6735f04b28f09b71f6fc67bd1b246254c03de6ce52ac462afc522098",
+    "build_four_bolt_deck.py": "120b6d456acc91d5c2be30eb5eec38838d645c455afd4ecef5d4d0ecc9876a42",
+    "build_liquid_handler_deck.py": "e6bc7284a9c536da134531dfafeb8831a0092caee15389db51cfcdab9899d069",
+    "render_deck.py": "4196678659e807153936380cc65b21240ccd933a25c35169a294d2ba40140044",
+    "render_photo_top.py": "e49e1704f4f97c2e285904a2ff057e0a88c9c636f056c0f460ef52cbd29a4a3f",
+    "verify.py": "7e7bad6f855eebeb229387599db78a89cd1f2e2ca9ca6f099d20b82c3bad909c"
+  }
+}

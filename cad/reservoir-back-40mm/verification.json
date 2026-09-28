@@ -1,0 +1,69 @@
+{
+  "cadquery": "2.8.0",
+  "python": "3.12.12",
+  "brim_capacity_ml": 80.408,
+  "reference_fill_ml": 10,
+  "reservoir_shift_cad_xyz_mm": [
+    40,
+    0,
+    0
+  ],
+  "outside_cup_mm": [
+    50.0,
+    50.0,
+    40.0
+  ],
+  "floor_mm": 2.0,
+  "cup_center_cad_xy": [
+    77.12,
+    151.0
+  ],
+  "plate_center_cad_xy": [
+    76.0,
+    70.0
+  ],
+  "assembly_interference_mm3": 0,
+  "mounting_holes_clear": true,
+  "meshes": {
+    "LH_deck": {
+      "watertight": true,
+      "bounds_mm": [
+        202.57999992370605,
+        174.6999969482422,
+        14.199999809265137
+      ]
+    },
+    "LH_deck_four_bolt": {
+      "watertight": true,
+      "bounds_mm": [
+        202.57999992370605,
+        186.0,
+        14.199999809265137
+      ]
+    },
+    "LH_reservoir_40mm": {
+      "watertight": true,
+      "bounds_mm": [
+        50.0,
+        50.0,
+        40.0
+      ]
+    }
+  },
+  "sha256": {
+    "LH_deck.step": "5b0cba01b3ea754ab0a73d881939364eb2bf242a738d739c9b3285caa7cad86d",
+    "LH_deck.stl": "12098af2bac6c2ee9ca351af25cf5b62a2196b175ba351d50e4f42604db2a971",
+    "LH_deck_assembly.step": "e483e1572ad9105f9c3b84b0f9fd391eca932a30ace86a1a089acfbdabdb33ba",
+    "LH_deck_four_bolt.step": "8122cb94168ca691a667a79fa1d4e29e0156206fb049422a3849470b1ace3b34",
+    "LH_deck_four_bolt.stl": "0301220fce0c801f57b868a12c770ce1d0f8ffea2849c04bccfebd991b7039cb",
+    "LH_deck_four_bolt_assembly.step": "755c0c034ed866bad9fe217658643495510bd4b762acdb46ca7315beec023765",
+    "LH_optional_plate_fit_gauge.stl": "6a6047cf47cdc178cfddbadc934d3e75332242b5f5819fe7f47e71fc986e21bf",
+    "LH_reservoir_40mm.step": "e7d03f38f022b455b2b5fec30e8a2c49e715fde4d4b67ac175fb5b3ea1c4d0e5",
+    "LH_reservoir_40mm.stl": "43e14d5a6735f04b28f09b71f6fc67bd1b246254c03de6ce52ac462afc522098",
+    "build_four_bolt_deck.py": "120b6d456acc91d5c2be30eb5eec38838d645c455afd4ecef5d4d0ecc9876a42",
+    "build_liquid_handler_deck.py": "c90e31fcaada32f6a2fbf3aad205cbdbffff6399f3bd1269ed1fb83051ff3e34",
+    "render_deck.py": "fd57ff51f0bfa6405c7034873d6a9656de32d78cc95692c3fd17870e3d6eb459",
+    "render_photo_top.py": "bf54b8bfd9a7db39d25f1399005db36696cddbde71965e7452350fc4e8206574",
+    "verify.py": "0979d25875ecf68c4cbde0b3afa7b76b0f582b44d8b99bedc7b061b436ddded7"
+  }
+}
