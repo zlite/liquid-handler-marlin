@@ -36,7 +36,11 @@ buildroot/bin/mftest -a -n1
   PWM; it is not used as a heater output.
 - E0 stepper socket is auto-assigned to the fourth linear axis, exposed in
   G-code as `A`.
-- A-axis calibration: 1600 steps/mm, measured on 2026-09-25. Repeated complete
+- R6 A-axis calibration: 3200 steps/mm for the new 1 mm pitch screw, calculated
+  as 1600 * 2 / 1 from the user-confirmed old 2 mm and new 1 mm pitches.
+  This assumes equal numbers of starts and unchanged motor/driver/gearing.
+  The new value has not yet been verified by physical measurement.
+- Historical A-axis calibration: 1600 steps/mm, measured on 2026-09-25. Repeated complete
   upward moves of 3200 pulses each produced 2 mm of measured travel. This
   supersedes the earlier 320 steps/mm estimate and the 3200 steps/mm value
   found in EEPROM. Downward moves that stopped early were not used to calibrate.
@@ -84,8 +88,38 @@ have been reviewed.
 
 The binary has been built and inspected, but not flashed.
 
-After installing this calibration revision, either reset all persisted settings
+For the historical 1600 steps/mm calibration revision, either reset all persisted settings
 to the compiled defaults with `M502` followed by `M500`, or update only the A
 axis with `M92 A1600` followed by `M500`. Use `M503` to confirm the active value.
 The historical binary above predates this correction; changing EEPROM through
 G-code does not require reflashing that binary.
+
+
+## R6: 1 mm pitch syringe screw (2026-09-28)
+
+- Build command: `pio run -e GD32F303RE_creality_mfl` from `marlin/`.
+- Result: success; RAM 8,880 / 65,536 bytes, flash 125,560 / 495,616 bytes.
+- Artifact: `../artifacts/Biokea-R6-A3200.bin` (125,956 bytes).
+- SHA-256: `ce92f445f20447e1bfb9e2d2751ea4ebe9ca8ec205039f403e4ad2d62d31b172`.
+- Identity: `Biokea R6`; default XYZ/A steps/mm: 80, 80, 400, 3200.
+- Binary inspection verified the compiled calibration, R6 identity, and reset
+  vector within the image linked at the Creality bootloader offset 0x08007000.
+- Built and inspected only; not flashed or motion-tested.
+
+Copy the binary to the printer SD card root with a filename distinct from the
+previous flash, then boot the printer with that card to install it. Existing
+EEPROM settings override compiled defaults. With the machine idle, run
+`../artifacts/SET_A3200.gcode` after flashing, or send its commands through the
+trusted controller job queue. It sets only A steps/mm, saves with M500, reports
+with M503, and ends with M400 / M84. Confirm A3200 in the report and Biokea R6
+with M115. Re-home before trusting any coordinates.
+
+Compatibility: `m5stack-controller/src/main.cpp` and `sd-card/PLATE100.gcode`
+still explicitly send M92 A1600. Those existing workflows retain their old
+coordinate scale and will override R6's A3200 setting at runtime. Before using
+them with the new physical-mm scale, update the override and re-teach syringe
+positions / regenerate the SD job together. Do not simply replace M92 in an
+existing dispensing job while keeping its A coordinates: doubling steps/mm
+would double its commanded physical travel. The saved A57.333 full position
+was captured at A1600 on the finer screw and is not valid unchanged at A3200.
+Controller firmware and historical SD jobs were not modified by this build.

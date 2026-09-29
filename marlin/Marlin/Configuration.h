@@ -136,7 +136,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Biokea R5"
+#define CUSTOM_MACHINE_NAME "Biokea R6"
 //#define CONFIGURABLE_MACHINE_NAME // Add G-code M550 to set/report the machine name
 
 // Printer's unique ID, used by some programs to differentiate between machines.
@@ -1360,7 +1360,8 @@
  * Override with M92 (when enabled below)
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 1600 }
+// Syringe A: 1600 * (old 2 mm pitch / new 1 mm pitch), same number of starts.
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 3200 }
 
 /**
  * Enable support for M92. Disable to save at least ~530 bytes of flash.

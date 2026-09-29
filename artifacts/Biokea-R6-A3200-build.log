@@ -1,0 +1,172 @@
+Processing GD32F303RE_creality_mfl (board: mfl_creality_v4; platform: https://github.com/bmourit/platform-mfl/archive/refs/tags/V1.0.4.zip; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/mfl/mfl_creality_v4.html
+PLATFORM: MFL for GD32F30x and GD32F10x (1.0.4) > Creality V4.x.x GD32F303RET6 (64k RAM, 512k Flash)
+HARDWARE: GD32F303RET6 120MHz, 64KB RAM, 512KB Flash
+PACKAGES: 
+ - framework-arduino-mfl @ 1.0.5+sha.0c3d812 
+ - toolchain-gccarmnoneeabi @ 1.140201.0 (14.2.1)
+Converting Marlin.ino
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Library Manager: Installing marlinfirmware/U8glib-HAL @ 0.5.5
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: U8glib-HAL@0.5.5 has been installed!
+Found 8 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- U8glib-HAL @ 0.5.5
+|-- FreeWatchdogTimer @ 1.0.0
+|-- SoftwareSerial @ 1.0.0
+|-- Wire @ 1.0.0
+|-- Servo @ 1.0.0
+Building in release mode
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/HAL.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/MarlinSerial.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/MinSerial.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/Servo.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/dogm/u8g_com_mfl_swspi.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/eeprom/eeprom_bl24cxx.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/eeprom/eeprom_if_iic.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/eeprom/eeprom_wired.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/fast_pwm.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/sd/SDCard.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/sd/sdio.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/GD32_MFL/timers.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/shared/Delay.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/shared/HAL.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/shared/MinSerial.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/shared/backtrace/backtrace.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/shared/backtrace/unwmemaccess.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/shared/eeprom_api.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/shared/esp_wifi.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/HAL/shared/servo.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/MarlinCore.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/core/serial.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/core/utility.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/feature/host_actions.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/calibrate/G28.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/config/M200-M205.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/config/M220.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/config/M92.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/control/M108_M112_M410.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/control/M111.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/control/M120_M121.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/control/M17_M18_M84.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/control/M211.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/control/M80_M81.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/control/M85.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/control/M997.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/control/M999.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/eeprom/M500-M504.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/gcode.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/gcode_d.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/geometry/G92.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/geometry/M206_M428.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/host/M110.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/host/M113.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/host/M114.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/host/M115.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/host/M118.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/host/M119.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/host/M876.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/lcd/M0_M1.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/lcd/M117.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/lcd/M300.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/motion/G0_G1.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/motion/G2_G3.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/motion/G4.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/motion/M400.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/parser.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/queue.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M1001.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M1003.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M20.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M21_M22.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M23.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M24_M25.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M26.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M27.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M28_M29.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M30.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M32.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M33.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M34.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M524.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M808.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/sd/M928.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/stats/M31.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/stats/M75-M78.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/temp/M105.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/gcode/temp/M106_M107.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/inc/Warnings.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/game.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/lcdprint_u8g.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/marlinui_DOGM.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/status_screen_DOGM.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/status_screen_lite_ST7920.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/u8g/u8g_dev_ssd1306_sh1106_128x64_I2C.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/u8g/u8g_dev_ssd1306_sh1106_128x64_SWSPI.cpp.o
+Marlin/src/inc/Warnings.cpp:432:6: warning: #warning "Note: Auto-assigned I STEP/DIR/ENABLE_PINs to unused En_STEP/DIR/ENABLE_PINs. (Define NO_AUTO_ASSIGN_WARNING to suppress this warning.)" [-Wcpp]
+  432 |     #warning "Note: Auto-assigned I STEP/DIR/ENABLE_PINs to unused En_STEP/DIR/ENABLE_PINs. (Define NO_AUTO_ASSIGN_WARNING to suppress this warning.)"
+      |      ^~~~~~~
+Marlin/src/inc/Warnings.cpp:1051:4: warning: #warning "The selected board has automatically enabled NO_SD_HOST_DRIVE." [-Wcpp]
+ 1051 |   #warning "The selected board has automatically enabled NO_SD_HOST_DRIVE."
+      |    ^~~~~~~
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/u8g/u8g_dev_ssd1309_12864.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/u8g/u8g_dev_st7565_64128n_HAL.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/u8g/u8g_dev_st7920_128x64_HAL.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/u8g/u8g_dev_tft_upscale_from_128x64.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/u8g/u8g_dev_uc1701_mini12864_HAL.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/u8g/ultralcd_st7920_u8glib_rrd_AVR.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/dogm/u8g_fontutf8.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/lcdprint.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/marlinui.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/menu/menu.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/menu/menu_advanced.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/menu/menu_configuration.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/menu/menu_main.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/menu/menu_media.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/menu/menu_motion.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/menu/menu_tune.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/lcd/utf8.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/libs/BL24CXX.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/libs/buzzer.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/libs/numtostr.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/libs/stopwatch.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/libs/vector_3.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/module/endstops.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/module/fans.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/module/motion.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/module/planner.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/module/settings.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/module/stepper.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/module/stepper/indirection.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/module/temperature.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/module/tool_change.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/sd/Sd2Card.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/sd/SdBaseFile.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/sd/SdFatUtil.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/sd/SdFile.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/sd/SdVolume.cpp.o
+Compiling .pio/build/GD32F303RE_creality_mfl/src/src/sd/cardreader.cpp.o
+Marlin/src/module/temperature.cpp: In static member function 'static void Temperature::isr()':
+Marlin/src/module/temperature.cpp:4169:25: warning: unused variable 'pwm_mask' [-Wunused-variable]
+ 4169 |       constexpr uint8_t pwm_mask = TERN0(SOFT_PWM_DITHER, _BV(SOFT_PWM_SCALE) - 1);
+      |                         ^~~~~~~~
+Linking .pio/build/GD32F303RE_creality_mfl/firmware.elf
+Checking size .pio/build/GD32F303RE_creality_mfl/firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  13.5% (used 8880 bytes from 65536 bytes)
+Flash: [===       ]  25.3% (used 125560 bytes from 495616 bytes)
+Building .pio/build/GD32F303RE_creality_mfl/firmware.bin
+rename_target([".pio/build/GD32F303RE_creality_mfl/firmware.bin"], [".pio/build/GD32F303RE_creality_mfl/firmware.elf"])
+FIRMWARE BIN: .pio/build/GD32F303RE_creality_mfl/firmware-171749.bin
+FIRMWARE ELF: .pio/build/GD32F303RE_creality_mfl/firmware-171749.elf
+========================= [SUCCESS] Took 11.49 seconds =========================
+
+Environment              Status    Duration
+-----------------------  --------  ------------
+GD32F303RE_creality_mfl  SUCCESS   00:00:11.489
+========================= 1 succeeded in 00:00:11.489 =========================
