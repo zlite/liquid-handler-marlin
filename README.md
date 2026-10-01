@@ -1,4 +1,4 @@
-There have been many attempts to modify a cheap Ender 3 printer into a liquid handler using standard syringes, but most suffer from similar problems: too expensive (they often use parts purchased from approved academic vendors, which tend to be way more expensive than their Amazon equivalents), too big, too heavy, too complicated or too imprecise (for example, having no limit switches to accurately home the syringe). 
+There have been [many attempts](https://www.hardware-x.com/article/S2468-0672(26)00087-8/fulltext) to modify a cheap Ender 3 printer into a liquid handler using standard syringes, but most suffer from similar problems: too expensive (they often use parts purchased from approved academic vendors, which tend to be way more expensive than their Amazon equivalents), too big, too heavy, too complicated or too imprecise (for example, having no limit switches to accurately home the syringe). 
 
 This is a modern version that improves on all of those dimensions along with adding a useful and easy to use web interface.
 
